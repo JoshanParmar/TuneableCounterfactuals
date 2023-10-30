@@ -63,6 +63,7 @@ def make_model(
     pre_processing: dict = None,
     dropna: bool = True,
     include_standard_scaler: bool = True,
+    return_training_set: bool = False,
 ):
     if (len(independent_variables)!=2) and (plot_decision_boundary):
         raise ValueError("Only 2 independent variables are allowed for plotting decision boundary")
@@ -107,3 +108,9 @@ def make_model(
     
     if plot_decision_boundary:
         do_plot_decision_boundary(model, train_X, independent_variables[0], independent_variables[1], target_variable)
+
+    if return_training_set:
+        return model, train_X
+
+    else:
+        return model
