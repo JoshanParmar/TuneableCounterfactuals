@@ -43,6 +43,7 @@ class SingleVariableExplainer():
         self.target_variable = target_variable
         self.explainable_variable = explainable_variable
         self.regressor_type = regressor
+        self.explanation_point = explanation_point
 
         if variable_bounds is None:
             if bounding_method=='minmax':
@@ -113,4 +114,12 @@ class SingleVariableExplainer():
 
         plt.xlabel(self.explainable_variable)
         plt.ylabel('Predicted probability')
-    
+        initial_point = pd.DataFrame(self.explanation_point).T[self.model.feature_names_in_]
+        initial_point.columns = self.model.feature_names_in_
+        
+        plt.scatter(
+            initial_point[self.explainable_variable],
+            self.model.predict_proba(initial_point)[0][1],
+            color='red',
+            zorder=10
+        )
