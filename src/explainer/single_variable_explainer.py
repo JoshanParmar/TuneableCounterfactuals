@@ -22,6 +22,8 @@ class SingleVariableExplainer():
         number_samples = 10,
         regressor = 'gaussian_process'
     ) -> None:
+        
+        # Check input
         if (training_dataset is None) and (variable_bounds is None):
             raise ValueError("Either training_dataset or variable_bounds must be provided")
         
@@ -39,12 +41,15 @@ class SingleVariableExplainer():
             raise ValueError("regressor must be either 'gaussian_process' or 'linear'")
         
         
+        # Set attributes
         self.model = model
         self.target_variable = target_variable
         self.explainable_variable = explainable_variable
         self.regressor_type = regressor
         self.explanation_point = explanation_point
 
+
+        # Handle variable bounds
         if variable_bounds is None:
             if bounding_method=='minmax':
                 variable_bounds = [
@@ -61,8 +66,9 @@ class SingleVariableExplainer():
                     training_dataset[explainable_variable].mean()-(std_dev*training_dataset[explainable_variable].std()),
                     training_dataset[explainable_variable].mean()+(std_dev*training_dataset[explainable_variable].std())
                 ]
+        self.variable_bounds = variable_bounds
 
-
+        # Do Sampling
         if sampling_method == 'uniform':
             self.samples = np.linspace(variable_bounds[0], variable_bounds[1], number_samples)
         
@@ -72,6 +78,7 @@ class SingleVariableExplainer():
                 number_samples,
             )
 
+        # Set up regressor
         if regressor == 'gaussian_process':
             self.regressor = GaussianProcessRegressor(
                 normalize_y=True,
@@ -80,12 +87,13 @@ class SingleVariableExplainer():
         elif regressor == 'linear':
             self.regressor = LinearRegression()
     
+        # Create explanation dataset
         self.explanation_dataset = pd.DataFrame(explanation_point).T.iloc[[0 for _ in range(number_samples)]].reset_index().drop(columns=['index'])[model.feature_names_in_]
         self.explanation_dataset[explainable_variable] = self.samples
         self.explanation_dataset['_prediction'] = self.model.predict_proba(self.explanation_dataset)[:, 1]
         
+        # Fit regressor
         self.regressor.fit(self.explanation_dataset[[explainable_variable]], self.explanation_dataset['_prediction']) 
-        self.variable_bounds = variable_bounds
 
     def plot(
         self,
