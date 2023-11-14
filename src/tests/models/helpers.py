@@ -21,7 +21,7 @@ def create_summary(df, features, target_var, number=10):
     plot_groupby = [feature if len(df[feature].unique())<30 else pd.cut(df[feature], np.linspace(df[feature].min(), df[feature].max()), number) for feature in features]
     plot_ranges = [feature for feature in features if len(df[feature].unique())>=30]
 
-    plot_df = df[features+[target_var]].groupby(plot_groupby).agg(['mean', 'count']).dropna()
+    plot_df = df[features+[target_var]].groupby(plot_groupby, observed=False).agg(['mean', 'count']).dropna()
     plot_df = pd.DataFrame(plot_df[target_var]).reset_index()
     
     for feature in plot_ranges:
