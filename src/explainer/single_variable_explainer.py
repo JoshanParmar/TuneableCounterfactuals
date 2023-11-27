@@ -291,12 +291,4 @@ class SingleVariableExplainer():
             resolution=resolution
         )[1]
     
-    def get_layer_score(
-        self,
-        initial_classification: int = None,
-        resolution = 100
-    ):
-        initial_point = pd.DataFrame(self.explanation_point).T[self.underlying_model.feature_names_in_]
-        initial_point.columns = self.underlying_model.feature_names_in_
-
-        return abs(self.get_extrema(return_val=True, initial_classification=initial_classification, resolution=resolution)[1] - self.underlying_model.predict_proba(initial_point)[0][1])
+    

@@ -1,7 +1,11 @@
 import numpy as np
 import pandas as pd
+
 from explainer.searcher import Searcher
+from explainer.scorer import BaseScorer, BasicScorer
 from explainer.single_variable_explainer import SingleVariableExplainer
+
+from typing import Union
 
 class Explainer:
     def __init__(
@@ -15,6 +19,7 @@ class Explainer:
         std_dev = 1,
         number_samples = 10,
         regressor = 'gaussian_process',
+        scorer: Union[str, BaseScorer] = 'basic',
         changeability_scores = None
     ):
         '''
@@ -54,6 +59,12 @@ class Explainer:
                 col: 1
                 for col in variables
             } 
+
+        if isinstance(scorer, str):
+            if scorer == 'basic':
+                self.scorer = BasicScorer()
+            else:
+                raise ValueError('scorer must be one one [\'basic\'] or a BaseScorer object')
         
 
 
@@ -114,7 +125,7 @@ class Explainer:
                 scores = {
                     node: (
                         self.changeability_scores[node[-1]] * 
-                        single_variable_explainers[node].get_layer_score(initial_classification=initial_classification)
+                        self.scorer.get_score(single_variable_explainers[node], initial_classification=initial_classification)
                     ) + previous_scores[node[:-1]] 
                     for node in evaluation_nodes
                 }
