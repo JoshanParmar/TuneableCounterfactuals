@@ -1,10 +1,13 @@
 from matplotlib import pyplot as plt
 import numpy as np
 import pandas as pd
+
+from sklearn.base import RegressorMixin
 from sklearn.gaussian_process import GaussianProcessRegressor
 from sklearn.gaussian_process.kernels import RBF
 from sklearn.linear_model import LinearRegression
 
+from typing import Union
 
 class SingleVariableExplainer():
     def __init__(
@@ -16,11 +19,11 @@ class SingleVariableExplainer():
         training_dataset = None,
         variable_bounds = None,
         sampling_method = 'uniform',
-        bounding_method = 'minmax',
+        bounding_method = 'meanstd',
         quantiles = 0.1,
         std_dev = 1,
         number_samples = 10,
-        regressor = 'gaussian_process'
+        regressor : Union[str, RegressorMixin]  = 'gaussian_process'
     ) -> None:
         '''
             This class fits a simple, interpretable model to the to the underlying model to explain the effect of a single variable on the underlying model's prediction.
@@ -69,8 +72,8 @@ class SingleVariableExplainer():
             number_samples: int (optional)
                 The number of samples to be taken to explain the variable. This should be an integer. If not provided, 10 will be used.
 
-            regressor: str (optional)
-                The type of regressor to be used as the 'simple model' described above. This should be either 'gaussian_process' or 'linear'. If not provided, 'gaussian_process' will be used.
+            regressor: str or SKLearn Regressor (optional)
+                The regressor used to fit the simple model. This should be either 'gaussian_process', 'linear' or a SKLearn Regressor. If not provided, 'gaussian_process' will be used.
 
             *Methods*
             plot: Plots the simple model and the underlying model's predictions for the samples taken.
@@ -97,8 +100,9 @@ class SingleVariableExplainer():
         if bounding_method not in ['minmax', 'quantile', 'meanstd']:
             raise ValueError("bounding_method must be either 'minmax', 'quantile' or 'meanstd'")
         
-        if regressor not in ['gaussian_process', 'linear']:
-            raise ValueError("regressor must be either 'gaussian_process' or 'linear'")
+        if isinstance(regressor, RegressorMixin):
+            if regressor not in ['gaussian_process', 'linear']:
+                raise ValueError("regressor must be either 'gaussian_process' or 'linear'")
         
         
         # Set attributes
@@ -139,13 +143,16 @@ class SingleVariableExplainer():
             )
 
         # Set up regressor
-        if regressor == 'gaussian_process':
-            self.regressor = GaussianProcessRegressor(
-                normalize_y=True,
-                kernel=RBF(length_scale=self.samples.std(), length_scale_bounds='fixed'),
-            )
-        elif regressor == 'linear':
-            self.regressor = LinearRegression()
+        if isinstance(regressor, RegressorMixin):
+            self.regressor = regressor.copy()
+        else:
+            if regressor == 'gaussian_process':
+                self.regressor = GaussianProcessRegressor(
+                    normalize_y=True,
+                    kernel=RBF(length_scale=self.samples.std(), length_scale_bounds='fixed'),
+                )
+            elif regressor == 'linear':
+                self.regressor = LinearRegression()
     
         # Create explanation dataset
         self.explanation_dataset = pd.DataFrame(explanation_point).T.iloc[[0 for _ in range(number_samples)]].reset_index().drop(columns=['index'])[underlying_model.feature_names_in_]

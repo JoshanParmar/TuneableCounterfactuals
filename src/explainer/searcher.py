@@ -6,7 +6,7 @@ class Searcher:
         '''
             This class implements the search strategy for the explainer.
 
-            More details are provided in our paper on this..
+            More details are provided in our paper on this.
 
             *Required parameters*
             - variables: list of variables to search over
