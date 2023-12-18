@@ -157,14 +157,16 @@ class SingleVariableExplainer():
         # Create explanation dataset
         self.explanation_dataset = pd.DataFrame(explanation_point).T.iloc[[0 for _ in range(number_samples)]].reset_index().drop(columns=['index'])[underlying_model.feature_names_in_]
         self.explanation_dataset[explainable_variable] = self.samples
-        self.explanation_dataset['_prediction'] = self.underlying_model.predict_proba(self.explanation_dataset)[:, 1]
+        self.explanation_dataset['_prediction'] = self.underlying_model.predict_proba(self.explanation_dataset[self.underlying_model[0].feature_names_in_])[:, 1]
         
         # Fit regressor
         self.regressor.fit(self.explanation_dataset[[explainable_variable]], self.explanation_dataset['_prediction']) 
 
     def plot(
         self,
-        plot_resolution: int = 100
+        plot_resolution: int = 100,
+        ax=None,
+        show_arrow: bool = True
     ):
         '''
             Plots the simple model and the underlying model's predictions for the samples taken.
@@ -173,6 +175,8 @@ class SingleVariableExplainer():
             plot_resolution: int (optional)
                 The number of points to be plotted for the simple model. This should be an integer. If not provided, 100 will be used.
         '''
+        if ax is None:
+            fig, ax = plt.subplots()
         X = np.linspace(
             self.variable_bounds[0],
             self.variable_bounds[1],
@@ -182,29 +186,48 @@ class SingleVariableExplainer():
         X_predict.columns = [self.explainable_variable]
         Y = self.regressor.predict(X_predict)
 
-        self.explanation_dataset.plot(self.explainable_variable, '_prediction', kind='scatter')
-        plt.plot(X,Y)
+        self.explanation_dataset.plot(self.explainable_variable, '_prediction', kind='scatter', ax=ax)
+        ax.plot(X,Y)
         
         if self.regressor_type == 'gaussian_process':
             _, Y_std = self.regressor.predict(X_predict, return_std=True)
-            plt.fill_between(
+            ax.fill_between(
                 X,
                 Y-Y_std,
                 Y+Y_std,
                 alpha=0.3
             )
 
-        plt.xlabel(self.explainable_variable)
-        plt.ylabel('Predicted probability')
+        ax.set_xlabel(self.explainable_variable)
+        ax.set_ylabel('Predicted probability')
         initial_point = pd.DataFrame(self.explanation_point).T[self.underlying_model.feature_names_in_]
         initial_point.columns = self.underlying_model.feature_names_in_
         
-        plt.scatter(
+        ax.scatter(
             initial_point[self.explainable_variable],
             self.underlying_model.predict_proba(initial_point)[0][1],
             color='red',
             zorder=10
         )
+
+        ax.scatter(
+            self.get_arg_extrema(),
+            self.get_val_extrema(),
+            color='green',
+            zorder=10
+        )
+        if show_arrow:
+            ax.arrow(
+                (initial_point[self.explainable_variable] + 0.02*(self.get_arg_extrema() - initial_point[self.explainable_variable])).values[0],
+                self.underlying_model.predict_proba(initial_point)[0][1] + 0.02*(self.get_val_extrema() - self.underlying_model.predict_proba(initial_point)[0][1]),
+                (0.92*(self.get_arg_extrema() - initial_point[self.explainable_variable])).values[0],
+                0.92*(self.get_val_extrema() - self.underlying_model.predict_proba(initial_point)[0][1]),
+                color='grey',
+                alpha=0.5,
+                width=(0.02*(self.get_val_extrema() - self.underlying_model.predict_proba(initial_point)[0][1])),
+                # head_width=0.05,
+                head_length=abs(0.05*(0.8*(self.get_arg_extrema() - initial_point[self.explainable_variable])).values[0]),
+            )
 
     def get_extrema(
         self,
@@ -226,7 +249,7 @@ class SingleVariableExplainer():
                 The number of points to be used in the evaluation of the simple model. This should be an integer. If not provided, 100 will be used.
         '''
         if initial_classification is None:
-            initial_classification = self.underlying_model.predict(pd.DataFrame(self.explanation_point[self.underlying_model.feature_names_in_]).T)
+            initial_classification = int(self.underlying_model.predict(pd.DataFrame(self.explanation_point[self.underlying_model.feature_names_in_]).T))
         
         X = np.linspace(
             self.variable_bounds[0],
@@ -243,6 +266,8 @@ class SingleVariableExplainer():
         elif initial_classification==1:
             val = np.min(Y)
             arg = X[np.argmin(Y)]
+        else:
+            print(initial_classification)
 
         if return_val:
             return arg, val

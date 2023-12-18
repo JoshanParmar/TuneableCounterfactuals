@@ -1,0 +1,2208 @@
+%!PS-Adobe-3.0 EPSF-3.0
+%%LanguageLevel: 3
+%%Title: mnist_counterfactual_example.eps
+%%Creator: Matplotlib v3.8.0, https://matplotlib.org/
+%%CreationDate: Fri Dec  8 11:38:54 2023
+%%Orientation: portrait
+%%BoundingBox: 0 0 416 136
+%%HiResBoundingBox: 0.000000 0.000000 415.928323 135.796964
+%%EndComments
+%%BeginProlog
+/mpldict 10 dict def
+mpldict begin
+/_d { bind def } bind def
+/m { moveto } _d
+/l { lineto } _d
+/r { rlineto } _d
+/c { curveto } _d
+/cl { closepath } _d
+/ce { closepath eofill } _d
+/sc { setcachedevice } _d
+%!PS-Adobe-3.0 Resource-Font
+%%Creator: Converted from TrueType to Type 3 by Matplotlib.
+10 dict begin
+/FontName /DejaVuSans def
+/PaintType 0 def
+/FontMatrix [0.00048828125 0 0 0.00048828125 0 0] def
+/FontBBox [-2090 -948 3673 2524] def
+/FontType 3 def
+/Encoding [/space /period /zero /one /four /five /seven /C /N /O /a /b /d /e /f /g /h /i /l /m /n /o /p /r /s /t /w /y] def
+/CharStrings 29 dict dup begin
+/.notdef 0 def
+/space{651 0 0 0 0 0 sc
+ce} _d
+/period{651 0 219 0 430 254 sc
+219 254 m
+430 254 l
+430 0 l
+219 0 l
+219 254 l
+
+ce} _d
+/zero{1303 0 135 -29 1167 1520 sc
+651 1360 m
+547 1360 469 1309 416 1206 c
+364 1104 338 950 338 745 c
+338 540 364 387 416 284 c
+469 182 547 131 651 131 c
+756 131 834 182 886 284 c
+939 387 965 540 965 745 c
+965 950 939 1104 886 1206 c
+834 1309 756 1360 651 1360 c
+
+651 1520 m
+818 1520 946 1454 1034 1321 c
+1123 1189 1167 997 1167 745 c
+1167 494 1123 302 1034 169 c
+946 37 818 -29 651 -29 c
+484 -29 356 37 267 169 c
+179 302 135 494 135 745 c
+135 997 179 1189 267 1321 c
+356 1454 484 1520 651 1520 c
+
+ce} _d
+/one{1303 0 225 0 1114 1493 sc
+254 170 m
+584 170 l
+584 1309 l
+225 1237 l
+225 1421 l
+582 1493 l
+784 1493 l
+784 170 l
+1114 170 l
+1114 0 l
+254 0 l
+254 170 l
+
+ce} _d
+/four{1303 0 100 0 1188 1493 sc
+774 1317 m
+264 520 l
+774 520 l
+774 1317 l
+
+721 1493 m
+975 1493 l
+975 520 l
+1188 520 l
+1188 352 l
+975 352 l
+975 0 l
+774 0 l
+774 352 l
+100 352 l
+100 547 l
+721 1493 l
+
+ce} _d
+/five{1303 0 158 -29 1124 1493 sc
+221 1493 m
+1014 1493 l
+1014 1323 l
+406 1323 l
+406 957 l
+435 967 465 974 494 979 c
+523 984 553 987 582 987 c
+749 987 881 941 978 850 c
+1075 759 1124 635 1124 479 c
+1124 318 1074 193 974 104 c
+874 15 733 -29 551 -29 c
+488 -29 424 -24 359 -13 c
+294 -2 227 14 158 35 c
+158 238 l
+218 205 280 181 344 165 c
+408 149 476 141 547 141 c
+662 141 754 171 821 232 c
+888 293 922 375 922 479 c
+922 583 888 665 821 726 c
+754 787 662 817 547 817 c
+493 817 439 811 385 799 c
+332 787 277 768 221 743 c
+221 1493 l
+
+ce} _d
+/seven{1303 0 168 0 1128 1493 sc
+168 1493 m
+1128 1493 l
+1128 1407 l
+586 0 l
+375 0 l
+885 1323 l
+168 1323 l
+168 1493 l
+
+ce} _d
+/C{1430 0 115 -29 1319 1520 sc
+1319 1378 m
+1319 1165 l
+1251 1228 1178 1276 1101 1307 c
+1024 1338 943 1354 856 1354 c
+685 1354 555 1302 464 1197 c
+373 1093 328 942 328 745 c
+328 548 373 398 464 293 c
+555 189 685 137 856 137 c
+943 137 1024 153 1101 184 c
+1178 215 1251 263 1319 326 c
+1319 115 l
+1248 67 1173 31 1094 7 c
+1015 -17 932 -29 844 -29 c
+618 -29 440 40 310 178 c
+180 317 115 506 115 745 c
+115 985 180 1174 310 1312 c
+440 1451 618 1520 844 1520 c
+933 1520 1017 1508 1096 1484 c
+1175 1461 1250 1425 1319 1378 c
+
+ce} _d
+/N{1532 0 201 0 1331 1493 sc
+201 1493 m
+473 1493 l
+1135 244 l
+1135 1493 l
+1331 1493 l
+1331 0 l
+1059 0 l
+397 1249 l
+397 0 l
+201 0 l
+201 1493 l
+
+ce} _d
+/O{1612 0 115 -29 1497 1520 sc
+807 1356 m
+660 1356 544 1301 457 1192 c
+371 1083 328 934 328 745 c
+328 557 371 408 457 299 c
+544 190 660 135 807 135 c
+954 135 1070 190 1155 299 c
+1241 408 1284 557 1284 745 c
+1284 934 1241 1083 1155 1192 c
+1070 1301 954 1356 807 1356 c
+
+807 1520 m
+1016 1520 1184 1450 1309 1309 c
+1434 1169 1497 981 1497 745 c
+1497 510 1434 322 1309 181 c
+1184 41 1016 -29 807 -29 c
+597 -29 429 41 303 181 c
+178 321 115 509 115 745 c
+115 981 178 1169 303 1309 c
+429 1450 597 1520 807 1520 c
+
+ce} _d
+/a{1255 0 123 -29 1069 1147 sc
+702 563 m
+553 563 450 546 393 512 c
+336 478 307 420 307 338 c
+307 273 328 221 371 182 c
+414 144 473 125 547 125 c
+649 125 731 161 792 233 c
+854 306 885 402 885 522 c
+885 563 l
+702 563 l
+
+1069 639 m
+1069 0 l
+885 0 l
+885 170 l
+843 102 791 52 728 19 c
+665 -13 589 -29 498 -29 c
+383 -29 292 3 224 67 c
+157 132 123 218 123 326 c
+123 452 165 547 249 611 c
+334 675 460 707 627 707 c
+885 707 l
+885 725 l
+885 810 857 875 801 921 c
+746 968 668 991 567 991 c
+503 991 441 983 380 968 c
+319 953 261 930 205 899 c
+205 1069 l
+272 1095 338 1114 401 1127 c
+464 1140 526 1147 586 1147 c
+748 1147 869 1105 949 1021 c
+1029 937 1069 810 1069 639 c
+
+ce} _d
+/b{1300 0 186 -29 1188 1556 sc
+997 559 m
+997 694 969 800 913 877 c
+858 954 781 993 684 993 c
+587 993 510 954 454 877 c
+399 800 371 694 371 559 c
+371 424 399 317 454 240 c
+510 163 587 125 684 125 c
+781 125 858 163 913 240 c
+969 317 997 424 997 559 c
+
+371 950 m
+410 1017 458 1066 517 1098 c
+576 1131 647 1147 729 1147 c
+865 1147 975 1093 1060 985 c
+1145 877 1188 735 1188 559 c
+1188 383 1145 241 1060 133 c
+975 25 865 -29 729 -29 c
+647 -29 576 -13 517 19 c
+458 52 410 101 371 168 c
+371 0 l
+186 0 l
+186 1556 l
+371 1556 l
+371 950 l
+
+ce} _d
+/d{1300 0 113 -29 1114 1556 sc
+930 950 m
+930 1556 l
+1114 1556 l
+1114 0 l
+930 0 l
+930 168 l
+891 101 842 52 783 19 c
+724 -13 654 -29 571 -29 c
+436 -29 325 25 240 133 c
+155 241 113 383 113 559 c
+113 735 155 877 240 985 c
+325 1093 436 1147 571 1147 c
+654 1147 724 1131 783 1098 c
+842 1066 891 1017 930 950 c
+
+303 559 m
+303 424 331 317 386 240 c
+442 163 519 125 616 125 c
+713 125 790 163 846 240 c
+902 317 930 424 930 559 c
+930 694 902 800 846 877 c
+790 954 713 993 616 993 c
+519 993 442 954 386 877 c
+331 800 303 694 303 559 c
+
+ce} _d
+/e{1260 0 113 -29 1151 1147 sc
+1151 606 m
+1151 516 l
+305 516 l
+313 389 351 293 419 226 c
+488 160 583 127 705 127 c
+776 127 844 136 910 153 c
+977 170 1043 196 1108 231 c
+1108 57 l
+1042 29 974 8 905 -7 c
+836 -22 765 -29 694 -29 c
+515 -29 374 23 269 127 c
+165 231 113 372 113 549 c
+113 732 162 878 261 985 c
+360 1093 494 1147 662 1147 c
+813 1147 932 1098 1019 1001 c
+1107 904 1151 773 1151 606 c
+
+967 660 m
+966 761 937 841 882 901 c
+827 961 755 991 664 991 c
+561 991 479 962 417 904 c
+356 846 320 764 311 659 c
+967 660 l
+
+ce} _d
+/f{721 0 47 0 760 1556 sc
+760 1556 m
+760 1403 l
+584 1403 l
+518 1403 472 1390 446 1363 c
+421 1336 408 1288 408 1219 c
+408 1120 l
+711 1120 l
+711 977 l
+408 977 l
+408 0 l
+223 0 l
+223 977 l
+47 977 l
+47 1120 l
+223 1120 l
+223 1198 l
+223 1323 252 1413 310 1470 c
+368 1527 460 1556 586 1556 c
+760 1556 l
+
+ce} _d
+/g{1300 0 113 -426 1114 1147 sc
+930 573 m
+930 706 902 810 847 883 c
+792 956 715 993 616 993 c
+517 993 440 956 385 883 c
+330 810 303 706 303 573 c
+303 440 330 337 385 264 c
+440 191 517 154 616 154 c
+715 154 792 191 847 264 c
+902 337 930 440 930 573 c
+
+1114 139 m
+1114 -52 1072 -193 987 -286 c
+902 -379 773 -426 598 -426 c
+533 -426 472 -421 415 -411 c
+358 -402 302 -387 248 -367 c
+248 -188 l
+302 -217 355 -239 408 -253 c
+461 -267 514 -274 569 -274 c
+690 -274 780 -242 840 -179 c
+900 -116 930 -21 930 106 c
+930 197 l
+892 131 843 82 784 49 c
+725 16 654 0 571 0 c
+434 0 323 52 239 157 c
+155 262 113 400 113 573 c
+113 746 155 885 239 990 c
+323 1095 434 1147 571 1147 c
+654 1147 725 1131 784 1098 c
+843 1065 892 1016 930 950 c
+930 1120 l
+1114 1120 l
+1114 139 l
+
+ce} _d
+/h{1298 0 186 0 1124 1556 sc
+1124 676 m
+1124 0 l
+940 0 l
+940 670 l
+940 776 919 855 878 908 c
+837 961 775 987 692 987 c
+593 987 514 955 457 892 c
+400 829 371 742 371 633 c
+371 0 l
+186 0 l
+186 1556 l
+371 1556 l
+371 946 l
+415 1013 467 1064 526 1097 c
+586 1130 655 1147 733 1147 c
+862 1147 959 1107 1025 1027 c
+1091 948 1124 831 1124 676 c
+
+ce} _d
+/i{569 0 193 0 377 1556 sc
+193 1120 m
+377 1120 l
+377 0 l
+193 0 l
+193 1120 l
+
+193 1556 m
+377 1556 l
+377 1323 l
+193 1323 l
+193 1556 l
+
+ce} _d
+/l{569 0 193 0 377 1556 sc
+193 1556 m
+377 1556 l
+377 0 l
+193 0 l
+193 1556 l
+
+ce} _d
+/m{1995 0 186 0 1821 1147 sc
+1065 905 m
+1111 988 1166 1049 1230 1088 c
+1294 1127 1369 1147 1456 1147 c
+1573 1147 1663 1106 1726 1024 c
+1789 943 1821 827 1821 676 c
+1821 0 l
+1636 0 l
+1636 670 l
+1636 777 1617 857 1579 909 c
+1541 961 1483 987 1405 987 c
+1310 987 1234 955 1179 892 c
+1124 829 1096 742 1096 633 c
+1096 0 l
+911 0 l
+911 670 l
+911 778 892 858 854 909 c
+816 961 757 987 678 987 c
+584 987 509 955 454 891 c
+399 828 371 742 371 633 c
+371 0 l
+186 0 l
+186 1120 l
+371 1120 l
+371 946 l
+413 1015 463 1065 522 1098 c
+581 1131 650 1147 731 1147 c
+812 1147 881 1126 938 1085 c
+995 1044 1038 984 1065 905 c
+
+ce} _d
+/n{1298 0 186 0 1124 1147 sc
+1124 676 m
+1124 0 l
+940 0 l
+940 670 l
+940 776 919 855 878 908 c
+837 961 775 987 692 987 c
+593 987 514 955 457 892 c
+400 829 371 742 371 633 c
+371 0 l
+186 0 l
+186 1120 l
+371 1120 l
+371 946 l
+415 1013 467 1064 526 1097 c
+586 1130 655 1147 733 1147 c
+862 1147 959 1107 1025 1027 c
+1091 948 1124 831 1124 676 c
+
+ce} _d
+/o{1253 0 113 -29 1141 1147 sc
+627 991 m
+528 991 450 952 393 875 c
+336 798 307 693 307 559 c
+307 425 335 319 392 242 c
+449 165 528 127 627 127 c
+725 127 803 166 860 243 c
+917 320 946 426 946 559 c
+946 692 917 797 860 874 c
+803 952 725 991 627 991 c
+
+627 1147 m
+787 1147 913 1095 1004 991 c
+1095 887 1141 743 1141 559 c
+1141 376 1095 232 1004 127 c
+913 23 787 -29 627 -29 c
+466 -29 340 23 249 127 c
+158 232 113 376 113 559 c
+113 743 158 887 249 991 c
+340 1095 466 1147 627 1147 c
+
+ce} _d
+/p{1300 0 186 -426 1188 1147 sc
+371 168 m
+371 -426 l
+186 -426 l
+186 1120 l
+371 1120 l
+371 950 l
+410 1017 458 1066 517 1098 c
+576 1131 647 1147 729 1147 c
+865 1147 975 1093 1060 985 c
+1145 877 1188 735 1188 559 c
+1188 383 1145 241 1060 133 c
+975 25 865 -29 729 -29 c
+647 -29 576 -13 517 19 c
+458 52 410 101 371 168 c
+
+997 559 m
+997 694 969 800 913 877 c
+858 954 781 993 684 993 c
+587 993 510 954 454 877 c
+399 800 371 694 371 559 c
+371 424 399 317 454 240 c
+510 163 587 125 684 125 c
+781 125 858 163 913 240 c
+969 317 997 424 997 559 c
+
+ce} _d
+/r{842 0 186 0 842 1147 sc
+842 948 m
+821 960 799 969 774 974 c
+750 980 723 983 694 983 c
+590 983 510 949 454 881 c
+399 814 371 717 371 590 c
+371 0 l
+186 0 l
+186 1120 l
+371 1120 l
+371 946 l
+410 1014 460 1064 522 1097 c
+584 1130 659 1147 748 1147 c
+761 1147 775 1146 790 1144 c
+805 1143 822 1140 841 1137 c
+842 948 l
+
+ce} _d
+/s{1067 0 111 -29 967 1147 sc
+907 1087 m
+907 913 l
+855 940 801 960 745 973 c
+689 986 631 993 571 993 c
+480 993 411 979 365 951 c
+320 923 297 881 297 825 c
+297 782 313 749 346 724 c
+379 700 444 677 543 655 c
+606 641 l
+737 613 829 573 884 522 c
+939 471 967 400 967 309 c
+967 205 926 123 843 62 c
+761 1 648 -29 504 -29 c
+444 -29 381 -23 316 -11 c
+251 0 183 18 111 41 c
+111 231 l
+179 196 246 169 312 151 c
+378 134 443 125 508 125 c
+595 125 661 140 708 169 c
+755 199 778 241 778 295 c
+778 345 761 383 727 410 c
+694 437 620 462 506 487 c
+442 502 l
+328 526 246 563 195 612 c
+144 662 119 730 119 817 c
+119 922 156 1004 231 1061 c
+306 1118 412 1147 549 1147 c
+617 1147 681 1142 741 1132 c
+801 1122 856 1107 907 1087 c
+
+ce} _d
+/t{803 0 55 0 754 1438 sc
+375 1438 m
+375 1120 l
+754 1120 l
+754 977 l
+375 977 l
+375 369 l
+375 278 387 219 412 193 c
+437 167 488 154 565 154 c
+754 154 l
+754 0 l
+565 0 l
+423 0 325 26 271 79 c
+217 132 190 229 190 369 c
+190 977 l
+55 977 l
+55 1120 l
+190 1120 l
+190 1438 l
+375 1438 l
+
+ce} _d
+/w{1675 0 86 0 1589 1120 sc
+86 1120 m
+270 1120 l
+500 246 l
+729 1120 l
+946 1120 l
+1176 246 l
+1405 1120 l
+1589 1120 l
+1296 0 l
+1079 0 l
+838 918 l
+596 0 l
+379 0 l
+86 1120 l
+
+ce} _d
+/y{1212 0 61 -426 1151 1120 sc
+659 -104 m
+607 -237 556 -324 507 -365 c
+458 -406 392 -426 309 -426 c
+162 -426 l
+162 -272 l
+270 -272 l
+321 -272 360 -260 388 -236 c
+416 -212 447 -155 481 -66 c
+514 18 l
+61 1120 l
+256 1120 l
+606 244 l
+956 1120 l
+1151 1120 l
+659 -104 l
+
+ce} _d
+end readonly def
+
+/BuildGlyph {
+ exch begin
+ CharStrings exch
+ 2 copy known not {pop /.notdef} if
+ true 3 1 roll get exec
+ end
+} _d
+
+/BuildChar {
+ 1 index /Encoding get exch get
+ 1 index /BuildGlyph get exec
+} _d
+
+FontName currentdict end definefont pop
+%!PS-Adobe-3.0 Resource-Font
+%%Creator: Converted from TrueType to Type 3 by Matplotlib.
+10 dict begin
+/FontName /DejaVuSans-Bold def
+/PaintType 0 def
+/FontMatrix [0.00048828125 0 0 0.00048828125 0 0] def
+/FontBBox [-2190 -850 4045 2405] def
+/FontType 3 def
+/Encoding [/space /a /c /e /E /f /i /l /m /n /o /p /r /t /u /x] def
+/CharStrings 17 dict dup begin
+/.notdef 0 def
+/space{713 0 0 0 0 0 sc
+ce} _d
+/a{1382 0 88 -29 1221 1147 sc
+674 504 m
+599 504 543 491 505 466 c
+468 441 449 403 449 354 c
+449 309 464 273 494 247 c
+525 222 567 209 621 209 c
+688 209 745 233 791 281 c
+837 330 860 390 860 463 c
+860 504 l
+674 504 l
+
+1221 639 m
+1221 0 l
+860 0 l
+860 166 l
+812 98 758 48 698 17 c
+638 -14 565 -29 479 -29 c
+363 -29 269 5 196 72 c
+124 140 88 228 88 336 c
+88 467 133 564 223 625 c
+314 686 456 717 649 717 c
+860 717 l
+860 745 l
+860 802 838 843 793 869 c
+748 896 679 909 584 909 c
+507 909 436 901 370 886 c
+304 871 243 848 186 817 c
+186 1090 l
+263 1109 340 1123 417 1132 c
+494 1142 572 1147 649 1147 c
+851 1147 997 1107 1086 1027 c
+1176 948 1221 818 1221 639 c
+
+ce} _d
+/c{1214 0 88 -29 1077 1147 sc
+1077 1085 m
+1077 793 l
+1028 826 979 851 930 867 c
+881 883 831 891 778 891 c
+678 891 600 862 544 803 c
+489 745 461 664 461 559 c
+461 454 489 373 544 314 c
+600 256 678 227 778 227 c
+834 227 887 235 937 252 c
+988 269 1034 293 1077 326 c
+1077 33 l
+1021 12 964 -3 906 -13 c
+849 -24 791 -29 733 -29 c
+531 -29 373 23 259 126 c
+145 230 88 374 88 559 c
+88 744 145 888 259 991 c
+373 1095 531 1147 733 1147 c
+792 1147 849 1142 906 1131 c
+963 1121 1020 1106 1077 1085 c
+
+ce} _d
+/e{1389 0 88 -29 1290 1147 sc
+1290 563 m
+1290 461 l
+453 461 l
+462 377 492 314 544 272 c
+596 230 669 209 762 209 c
+837 209 914 220 993 242 c
+1072 265 1154 299 1237 344 c
+1237 68 l
+1152 36 1068 12 983 -4 c
+898 -21 814 -29 729 -29 c
+526 -29 369 22 256 125 c
+144 228 88 373 88 559 c
+88 742 143 885 253 990 c
+364 1095 516 1147 709 1147 c
+885 1147 1026 1094 1131 988 c
+1237 882 1290 740 1290 563 c
+
+922 682 m
+922 750 902 805 862 846 c
+823 888 771 909 707 909 c
+638 909 581 889 538 850 c
+495 811 468 755 457 682 c
+922 682 l
+
+ce} _d
+/E{1399 0 188 0 1249 1493 sc
+188 1493 m
+1227 1493 l
+1227 1202 l
+573 1202 l
+573 924 l
+1188 924 l
+1188 633 l
+573 633 l
+573 291 l
+1249 291 l
+1249 0 l
+188 0 l
+188 1493 l
+
+ce} _d
+/f{891 0 39 0 909 1556 sc
+909 1556 m
+909 1321 l
+711 1321 l
+660 1321 625 1312 605 1293 c
+585 1275 575 1243 575 1198 c
+575 1120 l
+881 1120 l
+881 864 l
+575 864 l
+575 0 l
+217 0 l
+217 864 l
+39 864 l
+39 1120 l
+217 1120 l
+217 1198 l
+217 1320 251 1410 319 1468 c
+387 1527 492 1556 635 1556 c
+909 1556 l
+
+ce} _d
+/i{702 0 172 0 530 1556 sc
+172 1120 m
+530 1120 l
+530 0 l
+172 0 l
+172 1120 l
+
+172 1556 m
+530 1556 l
+530 1264 l
+172 1264 l
+172 1556 l
+
+ce} _d
+/l{702 0 172 0 530 1556 sc
+172 1556 m
+530 1556 l
+530 0 l
+172 0 l
+172 1556 l
+
+ce} _d
+/m{2134 0 170 0 1972 1147 sc
+1210 934 m
+1255 1003 1309 1056 1371 1092 c
+1434 1129 1502 1147 1577 1147 c
+1706 1147 1804 1107 1871 1028 c
+1938 949 1972 833 1972 682 c
+1972 0 l
+1612 0 l
+1612 584 l
+1613 593 1613 602 1613 611 c
+1614 620 1614 634 1614 651 c
+1614 730 1602 788 1579 823 c
+1556 859 1518 877 1466 877 c
+1398 877 1345 849 1308 793 c
+1271 737 1252 656 1251 550 c
+1251 0 l
+891 0 l
+891 584 l
+891 708 880 788 859 823 c
+838 859 800 877 745 877 c
+676 877 623 849 586 792 c
+549 736 530 656 530 551 c
+530 0 l
+170 0 l
+170 1120 l
+530 1120 l
+530 956 l
+574 1019 624 1067 681 1099 c
+738 1131 801 1147 870 1147 c
+947 1147 1016 1128 1075 1091 c
+1134 1054 1179 1001 1210 934 c
+
+ce} _d
+/n{1458 0 172 0 1298 1147 sc
+1298 682 m
+1298 0 l
+938 0 l
+938 111 l
+938 522 l
+938 619 936 685 931 722 c
+927 759 920 786 909 803 c
+895 826 876 844 852 857 c
+828 870 801 877 770 877 c
+695 877 637 848 594 790 c
+551 733 530 653 530 551 c
+530 0 l
+172 0 l
+172 1120 l
+530 1120 l
+530 956 l
+584 1021 641 1069 702 1100 c
+763 1131 830 1147 903 1147 c
+1032 1147 1130 1107 1197 1028 c
+1264 949 1298 833 1298 682 c
+
+ce} _d
+/o{1407 0 88 -29 1319 1147 sc
+705 891 m
+626 891 565 862 523 805 c
+482 748 461 666 461 559 c
+461 452 482 369 523 312 c
+565 255 626 227 705 227 c
+783 227 843 255 884 312 c
+925 369 946 452 946 559 c
+946 666 925 748 884 805 c
+843 862 783 891 705 891 c
+
+705 1147 m
+898 1147 1048 1095 1156 991 c
+1265 887 1319 743 1319 559 c
+1319 375 1265 231 1156 127 c
+1048 23 898 -29 705 -29 c
+512 -29 360 23 251 127 c
+142 231 88 375 88 559 c
+88 743 142 887 251 991 c
+360 1095 512 1147 705 1147 c
+
+ce} _d
+/p{1466 0 172 -426 1374 1147 sc
+530 162 m
+530 -426 l
+172 -426 l
+172 1120 l
+530 1120 l
+530 956 l
+579 1021 634 1069 694 1100 c
+754 1131 823 1147 901 1147 c
+1039 1147 1152 1092 1241 982 c
+1330 873 1374 732 1374 559 c
+1374 386 1330 245 1241 135 c
+1152 26 1039 -29 901 -29 c
+823 -29 754 -14 694 17 c
+634 48 579 97 530 162 c
+
+768 887 m
+691 887 632 859 591 802 c
+550 746 530 665 530 559 c
+530 453 550 372 591 315 c
+632 259 691 231 768 231 c
+845 231 903 259 943 315 c
+984 371 1004 452 1004 559 c
+1004 666 984 747 943 803 c
+903 859 845 887 768 887 c
+
+ce} _d
+/r{1010 0 172 0 1004 1147 sc
+1004 815 m
+973 830 941 840 910 847 c
+879 854 848 858 817 858 c
+725 858 654 828 604 769 c
+555 710 530 626 530 516 c
+530 0 l
+172 0 l
+172 1120 l
+530 1120 l
+530 936 l
+576 1009 629 1063 688 1096 c
+748 1130 820 1147 903 1147 c
+915 1147 928 1146 942 1145 c
+956 1144 976 1142 1003 1139 c
+1004 815 l
+
+ce} _d
+/t{979 0 27 0 932 1438 sc
+563 1438 m
+563 1120 l
+932 1120 l
+932 864 l
+563 864 l
+563 389 l
+563 337 573 302 594 283 c
+615 265 656 256 717 256 c
+901 256 l
+901 0 l
+594 0 l
+453 0 352 29 293 88 c
+234 147 205 248 205 389 c
+205 864 l
+27 864 l
+27 1120 l
+205 1120 l
+205 1438 l
+563 1438 l
+
+ce} _d
+/u{1458 0 160 -29 1286 1120 sc
+160 436 m
+160 1120 l
+520 1120 l
+520 1008 l
+520 947 520 871 519 779 c
+518 688 518 627 518 596 c
+518 506 520 441 525 401 c
+530 362 538 333 549 315 c
+564 292 583 274 606 261 c
+630 248 657 242 688 242 c
+763 242 821 271 864 328 c
+907 385 928 465 928 567 c
+928 1120 l
+1286 1120 l
+1286 0 l
+928 0 l
+928 162 l
+874 97 817 48 756 17 c
+696 -14 630 -29 557 -29 c
+428 -29 329 11 261 90 c
+194 169 160 285 160 436 c
+
+ce} _d
+/x{1321 0 31 0 1290 1120 sc
+455 573 m
+51 1120 l
+430 1120 l
+659 788 l
+891 1120 l
+1270 1120 l
+866 575 l
+1290 0 l
+911 0 l
+659 354 l
+410 0 l
+31 0 l
+455 573 l
+
+ce} _d
+end readonly def
+
+/BuildGlyph {
+ exch begin
+ CharStrings exch
+ 2 copy known not {pop /.notdef} if
+ true 3 1 roll get exec
+ end
+} _d
+
+/BuildChar {
+ 1 index /Encoding get exch get
+ 1 index /BuildGlyph get exec
+} _d
+
+FontName currentdict end definefont pop
+end
+%%EndProlog
+mpldict begin
+0 0 translate
+0 0 415.928 135.797 rectclip
+gsave
+0 0 m
+415.928323 0 l
+415.928323 135.796964 l
+0 135.796964 l
+cl
+1 setgray
+fill
+grestore
+gsave
+28.839474 32.0625 m
+73.732401 32.0625 l
+73.732401 76.955427 l
+28.839474 76.955427 l
+cl
+1 setgray
+fill
+grestore
+gsave
+28.839 32.063 44.893 44.893 rectclip
+
+28.8395 32.0625 translate
+[1 0 0 1 0 0] concat
+45.36 45.36 scale
+/DataString 63 string def
+63 63 8 [ 63 0 0 -63 0 63 ]
+{
+currentfile DataString readhexstring pop
+} bind false 3 colorimage
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffefefefafafaf9f9f9f9f9f9f9f9f9f5f5f5f1f1f1f3f3f3f9f9f9fafafafdfdfdfefefeffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffefefefcfcfcf7f7f7e7e7e7e3e3e3e3e3e3e3e3e3cfcfcfbcbcbcc9c9c9e1e1e1e7e7e7f5f5f5f9f9f9fdfdfdffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffdfdfdfcfcfcfafafaf8f8f8f6
+f6f6f3f3f3f1f1f1eeeeeee8e8e8d3d3d3cececececececdcdcdb7b7b7a1a1a1b0b0b0cbcbcbd3d3d3e8e8e8eeeeeef6f6f6fbfbfbfdfdfdffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffafafae9e9e9e1e1e1c9c9c9bbbbbba2a2a289
+89898585858080807676765252524949494949494949494141413939393f3f3f494949575757888888999999c0c0c0d5d5d5eaeaeaffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffefefef7f7f7dcdcdcd1d1d1adadad9999997474744f4f4f49
+49494444443737370e0e0e020202020202020202020202020202020202020202141414525252696969a1a1a1bebebedededefdfdfdfefefeffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe7e7e7bbbbbbaaaaaa7f7f7f7171715959594e4e4e3b3b3b28282826262622
+22221c1c1c0808080202020202020202020202020202020202020202020b0b0b2b2b2b3636365151516161618080809f9f9fbbbbbbedededf5f5f5fdfdfdffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffcfcfcf7979795f5f5f24242412121208080802020202020202020202020201010101
+0101010101020202020202020202020202020202020202020202020202020202020202050505060606242424414141797979dbdbdbeaeaeafbfbfbffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffefefefdfdfde5e5e5cececea2a2a25252523f3f3f1818180c0c0c06060602020202020202020201010101010101010101
+01010202020202020202020202020202020202020202020202020202020202020202020404041818182c2c2c5555559f9f9fb6b6b6ebebebfafafafefefeffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffcfcfcfafafab7b7b776767651515110101008080805050502020202020202020202020202020201010101010101010101010102
+0202020202020202020202020202020202020202020202020202020202020202020202050505070707171717353535595959d0d0d0f1f1f1fafafaffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffdfdfdfafafae5e5e5d8d8d89898985959593c3c3c08080802020202020202020202020202020202020202020201010101010101010101010102020202
+02020202020d0d0d1717171919192020201f1f1f1b1b1b1818180d0d0d0808080505050202020e0e0e212121464646bebebee1e1e1f5f5f5ffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffdfdfd
+f5f5f5e9e9e99393936565653d3d3d1515150f0f0f04040402020202020202020202020202020202020202020201010101010101010101010102020202020202
+02023030305e5e5e6d6d6d8888888585857171716565653434341919190e0e0e0202020505050808082626268a8a8aacacace3e3e3ffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffbfbfbebebeb
+dbdbdb7777774141412121210202020202020202020202020202020202020202020202020202020202020505050808080909090f0f0f10101010101011111147
+47477b7b7b8d8d8daaaaaaa7a7a79090908383834949492c2c2c1717170202020202020202021d1d1d7979799b9b9bddddddffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffecececa9a9a98e8e8e
+4141411818180d0d0d0202020202020202020202020202020202020202020202020202020202021919194242425252527d7d7d888888888888898989acacaccf
+cfcfd6d6d6e2e2e2e0e0e0d8d8d8d2d2d2b0b0b09d9d9d505050040404020202020202181818686868868686d6d6d6ffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe4e4e4858585646464242424
+0202020202020202020202020202020202020202020202020202020202020202020202022525256464647b7b7bb8b8b8c9c9c9c9c9c9c9c9c9e3e3e3fcfcfcfe
+fefefffffffffffffffffffdfdfde8e8e8dbdbdb6e6e6e0404040202020202021717175e5e5e7b7b7bd2d2d2ffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffefefefd2d2d2b3b3b3515151323232121212020202
+0202020202020202020202020202020202020202020202020202020202020202023e3e3ea8a8a8bcbcbcdcdcdce4e4e4e4e4e4e4e4e4f1f1f1fefefeffffffff
+fffffffffffffffffefefef2f2f2e9e9e98181811c1c1c1111110404041616165c5c5c797979d1d1d1ffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffdfdfdfa6a6a68383831f1f1f040404020202020202020202
+020202020202020202020202020202020202020202020202020202020202565656eaeaeafbfbfbfefefeffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffbfbfbf7f7f7939393323232212121050505161616595959767676d0d0d0ffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff8f8f8f2f2f2c6c6c67878785c5c5c161616020202020202020202020202020202
+020202020202020202020202020202060606070707141414202020666666e1e1e1f1f1f1fcfcfcffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffcfcfcf9f9f99b9b9b3e3e3e2828280606060f0f0f3c3c3c555555c5c5c5ffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffecececd9d9d9999999272727171717070707020202020202020202020202020202020202
+0202020202020202020202020b0b0b0f0f0f343434585858838383cfcfcfdededef8f8f8ffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffefefefcfcfca6a6a65252523737370707070404040808081b1b1bb1b1b1ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffe1e1e1c3c3c38686861b1b1b0d0d0d050505020202020202020202020202020202020202020202
+0202020404040808082020202f2f2f5656567c7c7c9d9d9dd6d6d6e3e3e3f9f9f9fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffd
+fdfdfafafa9f9f9f4646462f2f2f070707020202020202151515afafafffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffefefebebebe7e7e7e5555550d0d0d050505020202020202020202020202020202020202020202020202040404
+0b0b0b1717176c6c6c999999bfbfbfe3e3e3ebebebf7f7f7f9f9f9fefefefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff8f8f8f3
+f3f38181811111110c0c0c020202020202020202151515afafafffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffcfcfcf8f8f8aeaeae656565424242080808020202020202020202020202020202020202020202020202020202070707171717
+272727888888bbbbbbddddddfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff7f7f7f1f1f179
+7979040404020202020202020202020202151515afafafffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffcfcfcdcdcdcc9c9c97979792c2c2c1d1d1d0505050202020202020202020202020202020202020202020404040606061d1d1d6c6c6c898989
+c7c7c7e8e8e8f4f4f4fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff7f7f7f1f1f179797904
+0404020202020202020202020202151515afafafffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffafafac9c9c9aeaeae5d5d5d0d0d0d0808080202020202020202020202020202020202020202020202020505050808082828289b9b9bbfbfbfe9e9e9
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff7f7f7f1f1f179797904040402
+0202020202020202020202151515afafafffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fff4f4f48d8d8d5656562e2e2e070707050505010101010101010101010101010101010101010101010101191919454545646464c3c3c3dfdfdff4f4f4ffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffefefef2f2f2eaeaea76767602020201010101
+01010808081c1c1c303030b8b8b8ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffeded
+ed5151510000000000000101010101010101010101010101010101010101010101010101010101012f2f2f8080809e9e9eeaeaeaffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffefefeeeeeeee3e3e37171710202020101010101010d
+0d0d3535354d4d4dc2c2c2ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffededed5151
+510000000000000101010101010101010101010101010101010101010101010101010101013b3b3b9f9f9fbababaf1f1f1ffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffbfbfbd1d1d1bababa5d5d5d02020201010101010110101042
+42425d5d5dc7c7c7ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffededed5252520000
+000101010101010101010101010101010101010101010101010101010101010101014f4f4fd6d6d6e9e9e9fbfbfbffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff5f5f59f9f9f7070703838380202020101010101011616165b5b5b78
+7878d1d1d1ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffededed5252520101010101
+010202020505050808080808080404040202020202020202020808081010105b5b5be0e0e0f1f1f1fcfcfcffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffefefefafafaeeeeee8c8c8c5858582d2d2d0202020202020202021717175e5e5e7b7b7bd2
+d2d2ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffededed5252520101010101010202
+020d0d0d2020201e1e1e0b0b0b0606060404040202022020203f3f3f7e7e7eedededfafafafefefeffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffafafae7e7e7d5d5d55d5d5d1e1e1e1010100202020202020202021717175e5e5e7b7b7bd2d2d2ff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffededed5252520101010101010202021010
+102c2c2c2727270d0d0d0606060404040202022828284c4c4c878787f1f1f1fcfcfcffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffefefef7f7f7dbdbdbc6c6c64d4d4d0e0e0e0808080202020202020202021717176161617f7f7fd3d3d3ffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffededed5252520101010101010202021f1f1f5151
+514747471515150707070404040202022929295050508b8b8bf2f2f2fdfdfdffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffcfcfcf6f6f6e3e3e3a0a0a08585853131310606060404040202020202020202021e1e1e7e7e7e9f9f9fdededeffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffededed5252520101010101010202022626266464645959
+591818180707070404040202022b2b2b5151518c8c8cf2f2f2fdfdfdffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffff9f9f9f0f0f0d6d6d67f7f7f6161612222220202020202020202020202020202022020208e8e8eb1b1b1e4e4e4ffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff0f0f06c6c6c2626261414140202022020205858584e4e4e1717
+170808080404040202021717172929295d5d5db8b8b8cbcbcbecececf5f5f5fcfcfcffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+e3e3e3c7c7c7b2b2b28b8b8b7878784242423030301212120202020202020202020505050b0b0b2e2e2ea7a7a7cccccceeeeeeffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff3f3f38383834949492525250202021d1d1d4b4b4b4242421616160808
+080505050202020202020202023030308080809a9a9ad9d9d9ebebebf8f8f8fffffffffffffffffffffffffffffffffffffffffffffffffffffffefefec7c7c7
+9191916b6b6b2828281c1c1c080808020202020202020202020202020202080808111111393939c1c1c1e7e7e7f7f7f7ffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff6f6f6a3a3a37676764141410c0c0c1919193232322d2d2d0f0f0f0707070404
+04020202020202020202202020555555686868999999a8a8a8b5b5b5bcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbc8e8e8e616161
+4848481b1b1b121212060606020202020202020202020202020202181818414141646464d1d1d1efefeffafafaffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffcfcfcdadadac7c7c77171711c1c1c1414140808080707070404040202020202020202
+020202020202020505050b0b0b1111112929293131313f3f3f4646464646464646464545454545454545454545454646464646464545452828280e0e0e0b0b0b
+050505040404020202020202020202020202020202020202373737939393aeaeaeedededfefefeffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffdfdfde6e6e6d8d8d88b8b8b3f3f3f2b2b2b0b0b0b0606060202020202020202020202020202
+020202020202020202020707071818181f1f1f2828282f2f2f2f2f2f2f2f2f2e2e2e2e2e2e2e2e2e2f2f2f2f2f2f2f2f2f2e2e2e181818040404040404020202
+0202020202020202020202020202020c0c0c1414144b4b4babababc3c3c3f3f3f3ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffafafaf7f7f7d5d5d5b3b3b37f7f7f2020201212120606060202020202020202020202020202
+020202020202020404040707070808080b0b0b0c0c0c0c0c0c0c0c0c0c0c0c0b0b0b0b0b0b0c0c0c0c0c0c0c0c0c0c0c0c070707020202020202020202020202
+0202020202020202020202022c2c2c525252878787e2e2e2efefeffcfcfcffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffebebebd7d7d79c9c9c3434342222220c0c0c0505050404040202020202020202020202
+02020202020202020202020202020202020202020202020202010101010101010101010101020202020202020202020202020202020202040404050505050505
+0606060b0b0b0e0e0e3f3f3f6f6f6f9e9e9ef1f1f1fbfbfbffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffff8f8f8f1f1f1d3d3d3a0a0a08383833636361e1e1e0c0c0c0202020202020202020202020202
+020202020202020202020202020202020202020202020101010101010101010101010202020202020202020202020202020808081515151818181f1f1f252525
+5050506868689b9b9bccccccddddddfbfbfbfefefeffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffff2f2f2dbdbdbbababa4e4e4e2d2d2d1111110404040404040404040202020202020202
+020202020202020202020202020202020202020101010101010101010101010202020202020202020202020202020d0d0d1f1f1f2424242e2e2e383838777777
+999999ccccccffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffff9f9f9edededdcdcdca3a3a39292927171716161615757574e4e4e3b3b3b1919191212120606
+060202020202020202020202020202020101010101010101010101010202020202020202020f0f0f1c1c1c3f3f3f7f7f7f8989899595959c9c9cbbbbbbcccccc
+e6e6e6ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffefefef9f9f9f4f4f4cfcfcfbcbcbca9a9a99696967171713030302222220808080202
+020202020202020202020202020101010101010101010101010202020202020202021c1c1c343434717171dcdcdcebebebfafafafefefeffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffcfcfcf9f9f9e0e0e0d3d3d3c7c7c7bababaa0a0a07171716767675151514b4b4b3939
+393030303d3d3d4848484444443d3d3d3f3f3f4949494d4d4d4d4d4d4d4d4d6060607272729e9e9ee8e8e8f3f3f3fdfdfdffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffcfcfcfbfbfbfafafaf9f9f9f1f1f1e4e4e4dfdfdfd3d3d3cbcbcb9c9c9c8585
+85a3a3a3c3c3c3b9b9b9a5a5a5abababc8c8c8d0d0d0d0d0d0d0d0d0dadadae3e3e3ecececfcfcfcfefefeffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffbfbfbf3f3f3f0f0f0e7e7e7e0e0e0b7b7b7a3a3a3bebe
+bed9d9d9d0d0d0bfbfbfc3c3c3dededee4e4e4e4e4e4e5e5e5ebebebf2f2f2f7f7f7ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffdfdfdfcfcfcfafafaf9f9f9f0f0f0ecececf2f2f2f7f7
+f7f5f5f5f2f2f2f3f3f3f8f8f8fafafafafafafafafafbfbfbfdfdfdfefefeffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffff
+grestore
+0 setgray
+/DejaVuSans 10.000 selectfont
+gsave
+
+3.08281 20.4688 translate
+0 rotate
+0 0 m /C glyphshow
+6.98242 0 m /l glyphshow
+9.76074 0 m /a glyphshow
+15.8887 0 m /s glyphshow
+21.0986 0 m /s glyphshow
+26.3086 0 m /i glyphshow
+29.0869 0 m /f glyphshow
+32.6074 0 m /i glyphshow
+35.3857 0 m /e glyphshow
+41.5381 0 m /d glyphshow
+47.8857 0 m /space glyphshow
+51.0645 0 m /a glyphshow
+57.1924 0 m /s glyphshow
+62.4023 0 m /space glyphshow
+65.5811 0 m /zero glyphshow
+71.9434 0 m /space glyphshow
+75.1221 0 m /w glyphshow
+83.3008 0 m /i glyphshow
+86.0791 0 m /t glyphshow
+90 0 m /h glyphshow
+grestore
+/DejaVuSans 10.000 selectfont
+gsave
+
+11.8953 9.27813 translate
+0 rotate
+0 0 m /p glyphshow
+6.34766 0 m /r glyphshow
+10.209 0 m /o glyphshow
+16.3271 0 m /b glyphshow
+22.6748 0 m /a glyphshow
+28.8027 0 m /b glyphshow
+35.1504 0 m /i glyphshow
+37.9287 0 m /l glyphshow
+40.707 0 m /i glyphshow
+43.4854 0 m /t glyphshow
+47.4062 0 m /y glyphshow
+53.3242 0 m /space glyphshow
+56.5029 0 m /one glyphshow
+62.8652 0 m /period glyphshow
+66.0439 0 m /zero glyphshow
+72.4062 0 m /zero glyphshow
+grestore
+/DejaVuSans 12.000 selectfont
+gsave
+
+7.2 82.9554 translate
+0 rotate
+0 0 m /O glyphshow
+9.44531 0 m /r glyphshow
+14.3789 0 m /i glyphshow
+17.7129 0 m /g glyphshow
+25.3301 0 m /i glyphshow
+28.6641 0 m /n glyphshow
+36.2695 0 m /a glyphshow
+43.623 0 m /l glyphshow
+46.957 0 m /space glyphshow
+50.7715 0 m /i glyphshow
+54.1055 0 m /m glyphshow
+65.7949 0 m /a glyphshow
+73.1484 0 m /g glyphshow
+80.7656 0 m /e glyphshow
+grestore
+gsave
+82.797319 33.029094 m
+127.690247 33.029094 l
+127.690247 75.988833 l
+82.797319 75.988833 l
+cl
+1 setgray
+fill
+grestore
+1 setlinewidth
+0 setlinejoin
+0 setlinecap
+[] 0 setdash
+gsave
+82.797 33.029 44.893 42.96 rectclip
+125.649659 54.508964 m
+106.317776 48.065003 l
+106.317776 52.360977 l
+84.837907 52.360977 l
+84.837907 56.656951 l
+106.317776 56.656951 l
+106.317776 60.952925 l
+cl
+gsave
+fill
+grestore
+stroke
+grestore
+gsave
+136.755165 32.0625 m
+181.648092 32.0625 l
+181.648092 76.955427 l
+136.755165 76.955427 l
+cl
+1 setgray
+fill
+grestore
+gsave
+136.755 32.063 44.893 44.893 rectclip
+
+136.755 32.0625 translate
+[1 0 0 1 0 0] concat
+45.36 45.36 scale
+/DataString 63 string def
+63 63 8 [ 63 0 0 -63 0 63 ]
+{
+currentfile DataString readhexstring pop
+} bind false 3 colorimage
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffefefefafafaf9f9f9f9f9f9f9f9f9f5f5f5f1f1f1f3f3f3f9f9f9fafafafdfdfdfefefeffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffefefefcfcfcf7f7f7e7e7e7e3e3e3e3e3e3e3e3e3cfcfcfbcbcbcc9c9c9e1e1e1e7e7e7f5f5f5f9f9f9fdfdfdffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffdfdfdfcfcfcfafafaf8f8f8f6
+f6f6f3f3f3f1f1f1eeeeeee8e8e8d3d3d3cececececececdcdcdb7b7b7a1a1a1b0b0b0cbcbcbd3d3d3e8e8e8eeeeeef6f6f6fbfbfbfdfdfdffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffafafae9e9e9e1e1e1c9c9c9bbbbbba2a2a289
+89898585858080807676765252524949494949494949494141413939393f3f3f494949575757888888999999c0c0c0d5d5d5eaeaeaffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffefefef7f7f7dcdcdcd1d1d1adadad9999997474744f4f4f49
+49494444443737370e0e0e020202020202020202020202020202020202020202141414525252696969a1a1a1bebebedededefdfdfdfefefeffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe7e7e7bbbbbbaaaaaa7f7f7f7171715959594e4e4e3b3b3b28282826262622
+22221c1c1c0808080202020202020202020202020202020202020202020b0b0b2b2b2b3636365151516161618080809f9f9fbbbbbbedededf5f5f5fdfdfdffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffcfcfcf7979795f5f5f24242412121208080802020202020202020202020201010101
+0101010101020202020202020202020202020202020202020202020202020202020202050505060606242424414141797979dbdbdbeaeaeafbfbfbffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffefefefdfdfde5e5e5cececea2a2a25252523f3f3f1818180c0c0c06060602020202020202020201010101010101010101
+01010202020202020202020202020202020202020202020202020202020202020202020404041818182c2c2c5555559f9f9fb6b6b6ebebebfafafafefefeffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffcfcfcfafafab7b7b776767651515110101008080805050502020202020202020202020202020201010101010101010101010102
+0202020202020202020202020202020202020202020202020202020202020202020202050505070707171717353535595959d0d0d0f1f1f1fafafaffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffdfdfdfafafae5e5e5d8d8d89898985959593c3c3c08080802020202020202020202020202020202020202020201010101010101010101010102020202
+02020202020d0d0d1717171919192020201f1f1f1b1b1b1818180d0d0d0808080505050202020e0e0e212121464646bebebee1e1e1f5f5f5ffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffdfdfd
+f5f5f5e9e9e99393936565653d3d3d1515150f0f0f04040402020202020202020202020202020202020202020201010101010101010101010102020202020202
+02023030305e5e5e6d6d6d8888888585857171716565653434341919190e0e0e0202020505050808082626268a8a8aacacace3e3e3ffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffbfbfbebebeb
+dbdbdb7777774141412121210202020202020202020202020202020202020202020202020202020202020505050808080909090f0f0f10101010101011111147
+47477b7b7b8d8d8daaaaaaa7a7a79090908383834949492c2c2c1717170202020202020202021d1d1d7979799b9b9bddddddffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffecececa9a9a98e8e8e
+4141411818180d0d0d0202020202020202020202020202020202020202020202020202020202021919194242425252527d7d7d888888888888898989acacaccf
+cfcfd6d6d6e2e2e2e0e0e0d8d8d8d2d2d2b0b0b09d9d9d505050040404020202020202181818686868868686d6d6d6ffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe4e4e4858585646464242424
+0202020202020202020202020202020202020202020202020202020202020202020202022525256464647b7b7bb8b8b8c9c9c9c9c9c9c9c9c9e3e3e3fcfcfcfe
+fefefffffffffffffffffffdfdfde8e8e8dbdbdb6e6e6e0404040202020202021717175e5e5e7b7b7bd2d2d2ffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffefefefd2d2d2b3b3b3515151323232121212020202
+0202020202020202020202020202020202020202020202020202020202020202023e3e3ea8a8a8bcbcbcdcdcdce4e4e4e4e4e4e4e4e4f1f1f1fefefeffffffff
+fffffffffffffffffefefef2f2f2e9e9e98181811c1c1c1111110404041616165c5c5c797979d1d1d1ffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffdfdfdfa6a6a68383831f1f1f040404020202020202020202
+020202020202020202020202020202020202020202020202020202020202565656eaeaeafbfbfbfefefeffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffbfbfbf7f7f7939393323232212121050505161616595959767676d0d0d0ffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff8f8f8f2f2f2c6c6c67878785c5c5c161616020202020202020202020202020202
+0202020202021111114949495151512020200707071414142020204e4e4e9e9e9ea7a7a7a9a9a9b0b0b0e4e4e4ffffffffffffffffffffffffffffffffffffff
+fffffffffffcfcfcf9f9f99b9b9b3e3e3e2828280606060f0f0f3c3c3c555555c5c5c5ffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffecececd9d9d9999999272727171717070707020202020202020202020202020202020202
+0202022e2e2ec6c6c6dfdfdf5757570f0f0f343434585858414141151515101010111111222222b3b3b3ffffffffffffffffffffffffffffffffffffffffffff
+fffffefefefcfcfca6a6a65252523737370707070404040808081b1b1bb1b1b1ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffe1e1e1c3c3c38686861b1b1b0d0d0d0505050202020202020202020202020202021111112e2e2e
+575757dcdcdcf1f1f17171712e2e2e3e3e3e4d4d4d343434050505000000000000141414aeaeaefffffffffffffffffffffffffffffffffffffffffffffffffd
+fdfdfafafab7b7b77474744d4d4d0808080b0b0b2828283f3f3fbdbdbdffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffefefebebebe7e7e7e5555550d0d0d050505020202020202020202020202020202020202494949c7c7c7dcdcdc
+f8f8f8f8f8f8b9b9b99797975454541111110b0b0b010101000000010101141414aeaeaefffffffffffffffffffffffffffffffffffffffffffffffff8f8f8f5
+f5f5ebebebe2e2e2969696101010282828afafafd7d7d7f1f1f1ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffcfcfcf8f8f8aeaeae6565654949491818181515151515151212120808080202020c0c0c141414646464f1f1f1fffffffbfbfb
+f5f5f5c3c3c3a7a7a7525252010101000000000000000000020202161616afafaffffffffffffffffffffffffffffffffffffffffffffffffff7f7f7f4f4f4fa
+fafaffffffb0b0b02222223f3f3fd7d7d7ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffcfcfcdcdcdcc9c9c97979792c2c2c575757a5a5a5adadadadadada1a1a1383838040404595959acacacc9c9c9fafafaf7f7f7d8d8d8c6c6c6
+6b6b6b3b3b3b1e1e1e0000000000000000000202020d0d0d202020b3b3b3fffffffffffffffffffffffffffffffffffffffffffffffff7f7f7f4f4f4fafafaff
+ffffe4e4e4b2b2b2bcbcbcf1f1f1ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffafafac9c9c9aeaeae5d5d5d0d0d0d5e5e5ef0f0f0ffffffffffffeeeeee555555070707838383fefefefffffffffffff3f3f3c6c6c6adadad3c3c3c
+000000000000000000000000000000050505121212282828b5b5b5fffffffffffffffffffffffffffffffffffffffffffffffff7f7f7f3f3f3f9f9f9ffffffff
+fffffefefefdfdfdfefefefefefeffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fff4f4f48d8d8d5656562e2e2e070707595959f0f0f0fffffffffffff7f7f7ababab838383c2c2c2fffffffffffffffffff9f9f9e3e3e3cdcdcd484848000000
+0000000000000000000000000b0b0b2e2e2e464646c0c0c0fffffffffffffffffffffffffffffffffffffffffffefefef2f2f2edededf6f6f6ffffffd3d3d387
+8787858585999999a5a5a5e0e0e0ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffeded
+ed515151000000000000010101575757f0f0f0fffffffffffffffffffefefefefefeffffffffffffffffffffffffffffffffffffededed525252000000000000
+000000000000000000101010484848626262cacacafffffffffffffffffffffffffffffffffffffffffffefefeeeeeeee6e6e6f3f3f3ffffffaaaaaa1212120e
+0e0e3636364f4f4fc3c3c3ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffededed5151
+51000000000000010101575757f0f0f0fffffffffffffffffffffffffffffffffffffffffffdfdfdf9f9f9fafafafefefeededed525252000000000000000000
+0000000000001b1b1b787878989898dcdcdcfffffffffffffffffffffffffffffffffffffffffffbfbfbd1d1d1bbbbbbb3b3b3aaaaaa7171710c0c0c10101042
+42425d5d5dc7c7c7ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffededed5252520000
+00010101010101585858f0f0f0fffffffffffffffffffffffffffffffffffffffffff9f9f9edededefefeffcfcfcededed525252000000000000000000000000
+0000002e2e2ecacacaf5f5f5fcfcfcfffffffffffffffffffffffffffffffffffffffffff5f5f59f9f9f7070704141411414140d0d0d0202021616165b5b5b78
+7878d1d1d1ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffededed5252520101011818
+18303030777777f3f3f3fffffffffffffffffffffffffffffffffffffffffff9f9f9efefefe8e8e8d6d6d6c2c2c2444444000000000000000000000000000000
+303030d3d3d3fffffffffffffffffffffffffffffffffffffffffffefefefafafaeeeeee8c8c8c5858582d2d2d0202020202020202021717175e5e5e7b7b7bd2
+d2d2ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffededed5252520404046c6c6cd2d2
+d2e2e2e2fdfdfdfffffffffffffffffffffffffffffffffffffffffffdfdfdf9f9f9d3d3d35151512b2b2b0f0f0f000000000000000000000000000000303030
+d3d3d3fffffffffffffffffffffffffffffffffffffffffffafafae7e7e7d5d5d55d5d5d1e1e1e1010100202020202020202021717175e5e5e7b7b7bd2d2d2ff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffededed525252040404828282fefefefcfc
+fcf6f6f6f7f7f7fefefefffffffffffffffffff9f9f9f3f3f3f6f6f6fbfbfbd1d1d13d3d3d121212070707000000000000000000000000000000303030d3d3d3
+fffffffffffffffffffffffffffffffffffffefefef7f7f7dbdbdbc6c6c64d4d4d0e0e0e0808080202020202020202021717176161617f7f7fd3d3d3ffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffededed525252040404828282fefefedededea2a2
+a2aeaeaeeeeeeefffffffffffffefefec5c5c58c8c8cb1b1b1f6f6f6eeeeeebbbbbba1a1a1383838000000000000000000000000000000303030d3d3d3ffffff
+fffffffffffffffffffffffffcfcfcf6f6f6e3e3e3a0a0a08585853131310606060404040202020202020202021e1e1e7e7e7e9f9f9fdededeffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffededed525252050505828282fefefecdcdcd7474748686
+86e6e6e6fffffffffffffefefea8a8a85252528c8c8cf2f2f2fdfdfdffffffededed525252010101020202040404040404040404313131d3d3d3ffffffffffff
+fffffffffffffffffff9f9f9f0f0f0d6d6d67f7f7f6161612222220202020202020202020202020202022020208e8e8eb1b1b1e4e4e4ffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff0f0f06c6c6c282828939393fefefec9c9c96767677b7b7be3e3
+e3fffffffffffffdfdfd9393932c2c2c5d5d5db8b8b8cbcbcbececece3e3e34f4f4f020202424242818181828282828282999999eaeaeaffffffffffffffffff
+e3e3e3c7c7c7b2b2b28b8b8b7878784242423030301212120202020202020202020505050b0b0b2e2e2ea7a7a7cccccceeeeeeffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff3f3f38383834b4b4ba6a6a6fefefec3c3c35b5b5b707070e1e1e1ffff
+fffffffffdfdfd8080800505053030308080809a9a9ad9d9d9d9d9d94c4c4c040404818181fcfcfcfefefefefefefefefefffffffffffffffffffefefec7c7c7
+9191916b6b6b2828281c1c1c080808020202020202020202020202020202080808111111393939c1c1c1e7e7e7f7f7f7ffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff6f6f6a3a3a3787878969696b3b3b38989893d3d3d5b5b5bddddddf9f9f9c5c5
+c5a9a9a95555550404042020205555556868689999999c9c9c424242161616696969bbbbbbbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbc8e8e8e616161
+4848481b1b1b1212120606060202020202020202022e2e2e575757515151464646646464d1d1d1efefeffafafaffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffcfcfcdadadac7c7c77979792c2c2c1f1f1f090909353535d3d3d3efefef5f5f5f1212
+120b0b0b0202020505050b0b0b1111112929293030303434343535353d3d3d4646464545454545454545454545454646464646464545452828280e0e0e0b0b0b
+050505040404020202020202020202050505797979eeeeeed3d3d3a2a2a2aeaeaeedededfefefeffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffdfdfde6e6e6d8d8d88b8b8b3f3f3f2b2b2b0b0b0b2c2c2caeaeaec3c3c34545450202020202
+020202020202020202020707071818181f1f1f2828282f2f2f2f2f2f2f2f2f2e2e2e2e2e2e2e2e2e2f2f2f2f2f2f2f2f2f2e2e2e181818040404040404020202
+020202020202020202020202050505747474e2e2e2d3d3d3b8b8b8c3c3c3f3f3f3ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffafafaf7f7f7d5d5d5b3b3b37f7f7f2020201b1b1b2929292b2b2b1010100202020202020202
+020202020202020404040707070808080b0b0b0c0c0c0c0c0c0c0c0c0c0c0c0b0b0b0b0b0b0c0c0c0c0c0c0c0c0c0c0c0c070707020202020202020202020202
+0202020202020202020404044141417f7f7fa3a3a3e4e4e4efefeffcfcfcffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffebebebd7d7d79c9c9c3434342222220c0c0c0505050404040202020202020202020202
+02020202020202020202020202020202020202020202020202010101010101010101010101020202020202020202020202020202020202040404050505050505
+0606060b0b0b0e0e0e3f3f3f6f6f6f9e9e9ef1f1f1fbfbfbffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffff8f8f8f1f1f1d3d3d3a0a0a08383833636361e1e1e0c0c0c0202020202020202020202020202
+020202020202020202020202020202020202020202020101010101010101010101010202020202020202020202020202020808081515151818181f1f1f252525
+5050506868689b9b9bccccccddddddfbfbfbfefefeffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffff2f2f2dbdbdbbababa4e4e4e2d2d2d1111110404040404040404040202020202020202
+020202020202020202020202020202020202020101010101010101010101010202020202020202020202020202020d0d0d1f1f1f2424242e2e2e383838777777
+999999ccccccffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffff9f9f9edededdcdcdca3a3a39292927171716161615757574e4e4e3b3b3b1919191212120606
+060202020202020202020202020202020101010101010101010101010202020202020202020f0f0f1c1c1c3f3f3f7f7f7f8989899595959c9c9cbbbbbbcccccc
+e6e6e6ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffefefef9f9f9f4f4f4cfcfcfbcbcbca9a9a99696967171713030302222220808080202
+020202020202020202020202020101010101010101010101010202020202020202021c1c1c343434717171dcdcdcebebebfafafafefefeffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffcfcfcf9f9f9e0e0e0d3d3d3c7c7c7bababaa0a0a07171716767675151514b4b4b3939
+393030303d3d3d4848484444443d3d3d3f3f3f4949494d4d4d4d4d4d4d4d4d6060607272729e9e9ee8e8e8f3f3f3fdfdfdffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffcfcfcfbfbfbfafafaf9f9f9f1f1f1e4e4e4dfdfdfd3d3d3cbcbcb9c9c9c8585
+85a3a3a3c3c3c3b9b9b9a5a5a5abababc8c8c8d0d0d0d0d0d0d0d0d0dadadae3e3e3ecececfcfcfcfefefeffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffbfbfbf3f3f3f0f0f0e7e7e7e0e0e0b7b7b7a3a3a3bebe
+bed9d9d9d0d0d0bfbfbfc3c3c3dededee4e4e4e4e4e4e5e5e5ebebebf2f2f2f7f7f7ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffdfdfdfcfcfcfafafaf9f9f9f0f0f0ecececf2f2f2f7f7
+f7f5f5f5f2f2f2f3f3f3f8f8f8fafafafafafafafafafbfbfbfdfdfdfefefeffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffff
+grestore
+/DejaVuSans 10.000 selectfont
+gsave
+
+110.999 20.4688 translate
+0 rotate
+0 0 m /C glyphshow
+6.98242 0 m /l glyphshow
+9.76074 0 m /a glyphshow
+15.8887 0 m /s glyphshow
+21.0986 0 m /s glyphshow
+26.3086 0 m /i glyphshow
+29.0869 0 m /f glyphshow
+32.6074 0 m /i glyphshow
+35.3857 0 m /e glyphshow
+41.5381 0 m /d glyphshow
+47.8857 0 m /space glyphshow
+51.0645 0 m /a glyphshow
+57.1924 0 m /s glyphshow
+62.4023 0 m /space glyphshow
+65.5811 0 m /zero glyphshow
+71.9434 0 m /space glyphshow
+75.1221 0 m /w glyphshow
+83.3008 0 m /i glyphshow
+86.0791 0 m /t glyphshow
+90 0 m /h glyphshow
+grestore
+/DejaVuSans 10.000 selectfont
+gsave
+
+119.811 9.27813 translate
+0 rotate
+0 0 m /p glyphshow
+6.34766 0 m /r glyphshow
+10.209 0 m /o glyphshow
+16.3271 0 m /b glyphshow
+22.6748 0 m /a glyphshow
+28.8027 0 m /b glyphshow
+35.1504 0 m /i glyphshow
+37.9287 0 m /l glyphshow
+40.707 0 m /i glyphshow
+43.4854 0 m /t glyphshow
+47.4062 0 m /y glyphshow
+53.3242 0 m /space glyphshow
+56.5029 0 m /zero glyphshow
+62.8652 0 m /period glyphshow
+66.0439 0 m /seven glyphshow
+72.4062 0 m /four glyphshow
+grestore
+/DejaVuSans 12.000 selectfont
+gsave
+
+125.506 82.9554 translate
+0 rotate
+0 0 m /N glyphshow
+8.97656 0 m /e glyphshow
+16.3594 0 m /w glyphshow
+26.1738 0 m /space glyphshow
+29.9883 0 m /i glyphshow
+33.3223 0 m /m glyphshow
+45.0117 0 m /a glyphshow
+52.3652 0 m /g glyphshow
+59.9824 0 m /e glyphshow
+grestore
+gsave
+190.71301 33.029094 m
+235.605937 33.029094 l
+235.605937 75.988833 l
+190.71301 75.988833 l
+cl
+1 setgray
+fill
+grestore
+gsave
+190.713 33.029 44.893 42.96 rectclip
+233.56535 54.508964 m
+214.233467 48.065003 l
+214.233467 52.360977 l
+192.753598 52.360977 l
+192.753598 56.656951 l
+214.233467 56.656951 l
+214.233467 60.952925 l
+cl
+gsave
+fill
+grestore
+stroke
+grestore
+gsave
+244.670856 32.0625 m
+289.563783 32.0625 l
+289.563783 76.955427 l
+244.670856 76.955427 l
+cl
+1 setgray
+fill
+grestore
+gsave
+244.671 32.063 44.893 44.893 rectclip
+
+244.671 32.0625 translate
+[1 0 0 1 0 0] concat
+45.36 45.36 scale
+/DataString 63 string def
+63 63 8 [ 63 0 0 -63 0 63 ]
+{
+currentfile DataString readhexstring pop
+} bind false 3 colorimage
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffefefefafafaf9f9f9f9f9f9f9f9f9f5f5f5f1f1f1f3f3f3f9f9f9fafafafdfdfdfefefeffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffefefefcfcfcf7f7f7e7e7e7e3e3e3e3e3e3e3e3e3cfcfcfbcbcbcc9c9c9e1e1e1e7e7e7f5f5f5f9f9f9fdfdfdffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffdfdfdfcfcfcfafafaf8f8f8f6
+f6f6f3f3f3f1f1f1eeeeeee8e8e8d3d3d3cececececececdcdcdb7b7b7a1a1a1b0b0b0cbcbcbd3d3d3e8e8e8eeeeeef6f6f6fbfbfbfdfdfdffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffafafae9e9e9e1e1e1c9c9c9bbbbbba2a2a289
+89898585858080807676765252524949494949494949494141413939393f3f3f494949575757888888999999c0c0c0d5d5d5eaeaeaffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffefefef7f7f7dcdcdcd1d1d1adadad9999997474744f4f4f49
+49494444443737370e0e0e020202020202020202020202020202020202020202141414525252696969a1a1a1bebebedededefdfdfdfefefeffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe7e7e7bbbbbbaaaaaa7f7f7f7171715959594e4e4e3b3b3b28282826262622
+22221c1c1c0808080202020202020202020202020202020202020202020b0b0b2b2b2b3636365151516161618080809f9f9fbbbbbbedededf5f5f5fdfdfdffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffcfcfcf7979795f5f5f24242412121208080802020202020202020202020201010101
+0101010101020202020202020202020202020202020202020202020202020202020202050505060606242424414141797979dbdbdbeaeaeafbfbfbffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffefefefdfdfde5e5e5cececea2a2a25252523f3f3f1818180c0c0c06060602020202020202020201010101010101010101
+01010202020202020202020202020202020202020202020202020202020202020202020404041818182c2c2c5555559f9f9fb6b6b6ebebebfafafafefefeffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffcfcfcfafafab7b7b776767651515110101008080805050502020202020202020202020202020201010101010101010101010102
+0202020202020202020202020202020202020202020202020202020202020202020202050505070707171717353535595959d0d0d0f1f1f1fafafaffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffdfdfdfafafae5e5e5d8d8d89898985959593c3c3c08080802020202020202020202020202020202020202020201010101010101010101010102020202
+02020202020d0d0d1717171919192020201f1f1f1b1b1b1818180d0d0d0808080505050202020e0e0e212121464646bebebee1e1e1f5f5f5ffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffdfdfd
+f5f5f5e9e9e99393936565653d3d3d1515150f0f0f04040402020202020202020202020202020202020202020201010101010101010101010102020202020202
+02023030305e5e5e6d6d6d8888888585857171716565653434341919190e0e0e0202020505050808082626268a8a8aacacace3e3e3ffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffbfbfbebebeb
+dbdbdb7777774141412121210202020202020202020202020202020202020202020202020202020202020505050808080909090f0f0f10101010101011111147
+47477b7b7b8d8d8daaaaaaa7a7a79090908383834949492c2c2c1717170202020202020202021d1d1d7979799b9b9bddddddffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffecececa9a9a98e8e8e
+4141411818180d0d0d0202020202020202020202020202020202020202020202020202020202021919194242425252527d7d7d888888888888898989acacaccf
+cfcfd6d6d6e2e2e2e0e0e0d8d8d8d2d2d2b0b0b09d9d9d505050040404020202020202181818686868868686d6d6d6ffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe4e4e4858585646464242424
+0202020202020202020202020202020202020202020202020202020202020202020202022525256464647b7b7bb8b8b8c9c9c9c9c9c9c9c9c9e3e3e3fcfcfcfe
+fefefffffffffffffffffffdfdfde8e8e8dbdbdb6e6e6e0404040202020202021717175e5e5e7b7b7bd2d2d2ffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffefefefd2d2d2b3b3b3515151323232121212020202
+0202020202020202020202020202020202020202020202020202020202020202023e3e3ea8a8a8bcbcbcdcdcdce4e4e4e4e4e4e4e4e4f1f1f1fefefeffffffff
+fffffffffffffffffefefef2f2f2e9e9e98181811c1c1c1111110404041616165c5c5c797979d1d1d1ffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffdfdfdfa6a6a68383831f1f1f040404020202020202020202
+020202020202020202020202020202020202020202020202020202020202565656eaeaeafbfbfbfefefeffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffbfbfbf7f7f7939393323232212121050505161616595959767676d0d0d0ffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff8f8f8f2f2f2c6c6c67878785c5c5c161616020202020202020202020202020202
+0202020202021111114949495151512020200707071414142020204e4e4e9e9e9ea7a7a7a9a9a9b0b0b0e4e4e4ffffffffffffffffffffffffffffffffffffff
+fffffffffffcfcfcf9f9f99b9b9b3e3e3e2828280606060f0f0f3c3c3c555555c5c5c5ffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffecececd9d9d9999999272727171717070707020202020202020202020202020202020202
+0202022e2e2ec6c6c6dfdfdf5757570f0f0f343434585858414141151515101010111111222222b3b3b3ffffffffffffffffffffffffffffffffffffffffffff
+fffffefefefcfcfca6a6a65252523737370707070404040808081b1b1bb1b1b1ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffe1e1e1c3c3c38686861b1b1b0d0d0d0505050202020202020202020202020202021111112e2e2e
+575757dcdcdcf1f1f17171712e2e2e3e3e3e4d4d4d343434050505000000000000141414aeaeaefffffffffffffffffffffffffffffffffffffffffffffffffd
+fdfdfafafab7b7b77474745d5d5d3535353030303030303f3f3fbdbdbdffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffefefebebebe7e7e7e5555550d0d0d050505020202020202020202020202020202020202494949c7c7c7dcdcdc
+f8f8f8f8f8f8b9b9b99797975454541111110b0b0b010101000000010101141414aeaeaefffffffffffffffffffffffffffffffffffffffffffffffff8f8f8f5
+f5f5ebebebe2e2e2ddddddd5d5d5d3d3d3d3d3d3d7d7d7f1f1f1ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffcfcfcf8f8f8aeaeae6565654949491818181515151515151212120808080202020c0c0c141414646464f1f1f1fffffffbfbfb
+f5f5f5c3c3c3a7a7a7525252010101000000000000000000020202161616afafaffffffffffffffffffffffffffffffffffffffffffffffffff7f7f7f4f4f4fa
+fafaffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffcfcfcdcdcdcc9c9c97979792c2c2c575757a5a5a5adadadadadada1a1a1383838040404595959acacacc9c9c9fafafaf7f7f7d8d8d8c6c6c6
+6b6b6b3b3b3b1e1e1e0000000000000000000202020d0d0d202020b3b3b3fffffffffffffffffffffffffffffffffffffffffffffffff7f7f7f4f4f4fafafaff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffafafac9c9c9aeaeae5e5e5e0f0f0f5f5f5ff1f1f1ffffffffffffeeeeee555555070707838383fefefefffffffffffff3f3f3c6c6c6adadad3c3c3c
+000000000000000000000000000000050505121212282828b5b5b5fffffffffffffffffffffffffffffffffffffffffffffffff7f7f7f3f3f3f9f9f9ffffffff
+fffffefefefdfdfdfefefefefefeffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fff4f4f48d8d8d5858586f6f6f878787b0b0b0f8f8f8fffffffffffff7f7f7ababab838383c2c2c2fffffffffffffffffff9f9f9e3e3e3cdcdcd484848000000
+0000000000000000000000000b0b0b2e2e2e464646c0c0c0fffffffffffffffffffffffffffffffffffffffffffefefef2f2f2edededf6f6f6ffffffd3d3d387
+8787858585999999a5a5a5e0e0e0ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffeded
+ed515151020202818181fcfcfcfefefefffffffffffffffffffffffffefefefefefeffffffffffffffffffffffffffffffffffffededed525252000000000000
+000000000000000000101010484848626262cacacafffffffffffffffffffffffffffffffffffffffffffefefeeeeeeee6e6e6f3f3f3ffffffaaaaaa1212120e
+0e0e3636364f4f4fc3c3c3ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffededed5151
+51020202818181fefefefffffffffffffffffffffffffffffffffffffffffffffffffffffffdfdfdf9f9f9fafafafefefeededed525252000000000000000000
+0000000000001b1b1b787878989898dcdcdcfffffffffffffffffffffffffffffffffffffffffffbfbfbd1d1d1bbbbbbb3b3b3aaaaaa7171710c0c0c10101042
+42425d5d5dc7c7c7ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffededed5252520404
+04828282fefefefffffffffffffffffffffffffffffffffffffffffffffffffffffff9f9f9edededefefeffcfcfcededed525252000000000000000000000000
+0000002e2e2ecacacaf5f5f5fcfcfcfffffffffffffffffffffffffffffffffffffffffff5f5f59f9f9f7070704141411414140d0d0d0202021616165b5b5b78
+7878d1d1d1ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffededed5252520404048282
+82fefefefffffffffffffffffffffffffffffffffffffffffffffffffffffff9f9f9efefefe8e8e8d6d6d6c2c2c2444444000000000000000000000000000000
+303030d3d3d3fffffffffffffffffffffffffffffffffffffffffffefefefafafaeeeeee8c8c8c5858582d2d2d0202020202020202021717175e5e5e7b7b7bd2
+d2d2ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffededed525252040404828282fefe
+fefffffffffffffffffffffffffffffffffffffffffffffffffffffffdfdfdf9f9f9d3d3d35151512b2b2b0f0f0f000000000000000000000000000000303030
+d3d3d3fffffffffffffffffffffffffffffffffffffffffffafafae7e7e7d5d5d55d5d5d1e1e1e1010100202020202020202021717175e5e5e7b7b7bd2d2d2ff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffeeeeee545454050505838383fefefefcfc
+fcf6f6f6f7f7f7fefefefffffffffffffffffff9f9f9f3f3f3f6f6f6fbfbfbd1d1d13d3d3d121212070707000000000000000000000000000000303030d3d3d3
+fffffffffffffffffffffffffffffffffffffefefef7f7f7dbdbdbc6c6c64d4d4d0e0e0e0808080202020202020202021717176161617f7f7fd3d3d3ffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffeeeeee5959590e0e0e878787fefefedededea2a2
+a2aeaeaeeeeeeefffffffffffffefefec5c5c58c8c8cb1b1b1f6f6f6eeeeeebbbbbba1a1a1383838000000000000000000000000000000303030d3d3d3ffffff
+fffffffffffffffffffffffffcfcfcf6f6f6e3e3e3a0a0a08585853131310606060404040202020202020202021e1e1e7e7e7e9f9f9fdededeffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffefefef5d5d5d1212128a8a8afefefecdcdcd7474748686
+86e6e6e6fffffffffffffefefea8a8a85252528c8c8cf2f2f2fdfdfdffffffededed525252010101020202040404040404040404313131d3d3d3ffffffffffff
+fffffffffffffffffff9f9f9f0f0f0d6d6d67f7f7f6161612222220202020202020202020202020202022020208e8e8eb1b1b1e4e4e4ffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff1f1f1717171303030989898fefefec9c9c96767677b7b7be3e3
+e3fffffffffffffdfdfd9393932c2c2c5d5d5db8b8b8cbcbcbececece3e3e34f4f4f020202424242818181828282828282999999eaeaeaffffffffffffffffff
+e3e3e3c7c7c7b2b2b28b8b8b7878784242423030301212120202020202020202020505050b0b0b2e2e2ea7a7a7cccccceeeeeeffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff3f3f38383834b4b4ba6a6a6fefefec3c3c35b5b5b707070e1e1e1ffff
+fffffffffdfdfd8080800505053030308080809a9a9ad9d9d9d9d9d94c4c4c040404818181fcfcfcfefefefefefefefefefffffffffffffffffffefefec7c7c7
+9191916b6b6b2828281c1c1c080808020202020202020202020202020202080808111111393939c1c1c1e7e7e7f7f7f7ffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff6f6f6a3a3a3787878969696b3b3b38989893d3d3d5b5b5bddddddf9f9f9c5c5
+c5a9a9a95555550404042020205555556868689999999c9c9c424242161616696969bbbbbbbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbc8e8e8e616161
+4848481b1b1b1212120606060202020202020202022e2e2e575757515151464646646464d1d1d1efefeffafafaffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffcfcfcdadadac7c7c77979792c2c2c1f1f1f090909353535d3d3d3efefef5f5f5f1212
+120b0b0b0202020505050b0b0b1111112929293030303434343535353d3d3d4646464545454545454545454545454646464646464545452828280e0e0e0b0b0b
+050505040404020202020202020202050505797979eeeeeed3d3d3a2a2a2aeaeaeedededfefefeffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffdfdfde6e6e6d8d8d88b8b8b3f3f3f2b2b2b0b0b0b2c2c2caeaeaec3c3c34545450202020202
+020202020202020202020707071818181f1f1f2828282f2f2f2f2f2f2f2f2f2e2e2e2e2e2e2e2e2e2f2f2f2f2f2f2f2f2f2e2e2e181818040404040404020202
+020202020202020202020202050505747474e2e2e2d3d3d3b8b8b8c3c3c3f3f3f3ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffafafaf7f7f7d5d5d5b3b3b37f7f7f2020201b1b1b2929292b2b2b1010100202020202020202
+020202020202020404040707070808080b0b0b0c0c0c0c0c0c0c0c0c0c0c0c0b0b0b0b0b0b0c0c0c0c0c0c0c0c0c0c0c0c070707020202020202020202020202
+0202020202020202020404044141417f7f7fa3a3a3e4e4e4efefeffcfcfcffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffebebebd7d7d79c9c9c3434342222220c0c0c0505050404040202020202020202020202
+02020202020202020202020202020202020202020202020202010101010101010101010101020202020202020202020202020202020202040404050505050505
+0606060b0b0b0e0e0e3f3f3f6f6f6f9e9e9ef1f1f1fbfbfbffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffff8f8f8f1f1f1d3d3d3a0a0a08383833636361e1e1e0c0c0c0202020202020202020202020202
+020202020202020202020202020202020202020202020101010101010101010101010202020202020202020202020202020808081515151818181f1f1f252525
+5050506868689b9b9bccccccddddddfbfbfbfefefeffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffff2f2f2d9d9d9b8b8b84d4d4d2d2d2d1111110404040404040404040202020202020202
+020202020202020202020202020202020202020101010101010101010101010202020202020202020202020202020d0d0d1f1f1f2424242e2e2e383838777777
+999999ccccccffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffcecece7676767474748e8e8e9292927171716161615757574e4e4e3b3b3b1919191212120606
+060202020202020202020202020202020101010101010101010101010202020202020202020f0f0f1c1c1c3f3f3f7f7f7f8989899595959c9c9cbbbbbbcccccc
+e6e6e6ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffababab141414303030cececef4f4f4cfcfcfbcbcbca9a9a99696967171713030302222220808080202
+020202020202020202020202020101010101010101010101010202020202020202021c1c1c343434717171dcdcdcebebebfafafafefefeffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffc7c7c7626262767676dfdfdff9f9f9e0e0e0d3d3d3c7c7c7bababaa0a0a07171716767675151514b4b4b3939
+393030303d3d3d4848484444443d3d3d3f3f3f4949494d4d4d4d4d4d4d4d4d6060607272729e9e9ee8e8e8f3f3f3fdfdfdffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffafafaf0f0f0f2f2f2fcfcfcfffffffcfcfcfbfbfbfafafaf9f9f9f1f1f1e4e4e4dfdfdfd3d3d3cbcbcb9c9c9c8585
+85a3a3a3c3c3c3b9b9b9a5a5a5abababc8c8c8d0d0d0d0d0d0d0d0d0dadadae3e3e3ecececfcfcfcfefefeffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffbfbfbf3f3f3f0f0f0e7e7e7e0e0e0b7b7b7a3a3a3bebe
+bed9d9d9d0d0d0bfbfbfc3c3c3dededee4e4e4e4e4e4e5e5e5ebebebf2f2f2f7f7f7ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffdfdfdfcfcfcfafafaf9f9f9f0f0f0ecececf2f2f2f7f7
+f7f5f5f5f2f2f2f3f3f3f8f8f8fafafafafafafafafafbfbfbfdfdfdfefefeffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffff
+grestore
+/DejaVuSans 10.000 selectfont
+gsave
+
+218.914 20.4688 translate
+0 rotate
+0 0 m /C glyphshow
+6.98242 0 m /l glyphshow
+9.76074 0 m /a glyphshow
+15.8887 0 m /s glyphshow
+21.0986 0 m /s glyphshow
+26.3086 0 m /i glyphshow
+29.0869 0 m /f glyphshow
+32.6074 0 m /i glyphshow
+35.3857 0 m /e glyphshow
+41.5381 0 m /d glyphshow
+47.8857 0 m /space glyphshow
+51.0645 0 m /a glyphshow
+57.1924 0 m /s glyphshow
+62.4023 0 m /space glyphshow
+65.5811 0 m /zero glyphshow
+71.9434 0 m /space glyphshow
+75.1221 0 m /w glyphshow
+83.3008 0 m /i glyphshow
+86.0791 0 m /t glyphshow
+90 0 m /h glyphshow
+grestore
+/DejaVuSans 10.000 selectfont
+gsave
+
+227.727 9.27813 translate
+0 rotate
+0 0 m /p glyphshow
+6.34766 0 m /r glyphshow
+10.209 0 m /o glyphshow
+16.3271 0 m /b glyphshow
+22.6748 0 m /a glyphshow
+28.8027 0 m /b glyphshow
+35.1504 0 m /i glyphshow
+37.9287 0 m /l glyphshow
+40.707 0 m /i glyphshow
+43.4854 0 m /t glyphshow
+47.4062 0 m /y glyphshow
+53.3242 0 m /space glyphshow
+56.5029 0 m /zero glyphshow
+62.8652 0 m /period glyphshow
+66.0439 0 m /five glyphshow
+72.4062 0 m /four glyphshow
+grestore
+/DejaVuSans 12.000 selectfont
+gsave
+
+233.422 82.9554 translate
+0 rotate
+0 0 m /N glyphshow
+8.97656 0 m /e glyphshow
+16.3594 0 m /w glyphshow
+26.1738 0 m /space glyphshow
+29.9883 0 m /i glyphshow
+33.3223 0 m /m glyphshow
+45.0117 0 m /a glyphshow
+52.3652 0 m /g glyphshow
+59.9824 0 m /e glyphshow
+grestore
+gsave
+298.628701 33.029094 m
+343.521628 33.029094 l
+343.521628 75.988833 l
+298.628701 75.988833 l
+cl
+1 setgray
+fill
+grestore
+gsave
+298.629 33.029 44.893 42.96 rectclip
+341.481041 54.508964 m
+322.149158 48.065003 l
+322.149158 52.360977 l
+300.669289 52.360977 l
+300.669289 56.656951 l
+322.149158 56.656951 l
+322.149158 60.952925 l
+cl
+gsave
+fill
+grestore
+stroke
+grestore
+gsave
+352.586546 32.0625 m
+397.479474 32.0625 l
+397.479474 76.955427 l
+352.586546 76.955427 l
+cl
+1 setgray
+fill
+grestore
+gsave
+352.587 32.063 44.893 44.893 rectclip
+
+352.587 32.0625 translate
+[1 0 0 1 0 0] concat
+45.36 45.36 scale
+/DataString 63 string def
+63 63 8 [ 63 0 0 -63 0 63 ]
+{
+currentfile DataString readhexstring pop
+} bind false 3 colorimage
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffefefefafafaf9f9f9f9f9f9f9f9f9f5f5f5f1f1f1f3f3f3f9f9f9fafafafdfdfdfefefeffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffefefefcfcfcf7f7f7e7e7e7e3e3e3e3e3e3e3e3e3cfcfcfbcbcbcc9c9c9e1e1e1e7e7e7f5f5f5f9f9f9fdfdfdffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffdfdfdfcfcfcfafafaf8f8f8f6
+f6f6f3f3f3f1f1f1eeeeeee8e8e8d3d3d3cececececececdcdcdb7b7b7a1a1a1b0b0b0cbcbcbd3d3d3e8e8e8eeeeeef6f6f6fbfbfbfdfdfdffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffafafae9e9e9e1e1e1c9c9c9bbbbbba2a2a289
+89898585858080807676765252524949494949494949494141413939393f3f3f494949575757888888999999c0c0c0d5d5d5eaeaeaffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffefefef7f7f7dcdcdcd1d1d1adadad9999997474744f4f4f49
+49494444443737370e0e0e020202020202020202020202020202020202020202141414525252696969a1a1a1bebebedededefdfdfdfefefeffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe7e7e7bbbbbbaaaaaa7f7f7f7171715959594e4e4e3b3b3b28282826262622
+22221c1c1c0808080202020202020202020202020202020202020202020b0b0b2b2b2b3636365151516161618080809f9f9fbbbbbbedededf5f5f5fdfdfdffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffcfcfcf7979795f5f5f24242412121208080802020202020202020202020201010101
+0101010101020202020202020202020202020202020202020202020202020202020202050505060606242424414141797979dbdbdbeaeaeafbfbfbffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffefefefdfdfde5e5e5cececea2a2a25252523f3f3f1818180c0c0c06060602020202020202020201010101010101010101
+01010808083d3d3d5757572d2d2d0202020202020202020202020202020202020202020404041818182c2c2c5555559f9f9fb6b6b6ebebebfafafafefefeffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffcfcfcfafafab7b7b776767651515110101008080805050502020202020202020202020202020201010101010101010101010112
+1212a3a3a3ededed777777040404020202020202020202020202020202020202020202050505070707171717353535595959d0d0d0f1f1f1fafafaffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffdfdfdfafafae5e5e5d8d8d89898985959593c3c3c0808080202020202020202020202020202020202020202020101010101010101010101011010108f
+8f8fcfcfcf7272721818181919192020201f1f1f1b1b1b1818180d0d0d0808080505050202020e0e0e212121464646bebebee1e1e1f5f5f5ffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffdfdfd
+f5f5f5e9e9e99393936565653d3d3d1515150f0f0f0404040202020202020202020202020202020202020202020101010101010101010101010606062020202f
+2f2f4747475e5e5e6d6d6d8888888585857171716565653434341919190e0e0e0202020505050808082626268a8a8aacacace3e3e3ffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffbfbfbebebeb
+dbdbdb7777774141412121210202020202020202020202020202020202020202020202020202020202020505050808080909090f0f0f10101010101011111147
+47477b7b7b8d8d8daaaaaaa7a7a79090908383834949492c2c2c1717170202020202020202021d1d1d7979799b9b9bddddddffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffecececa9a9a98e8e8e
+4141411818180d0d0d0202020202020202020202020202020202020202020202020202020202021919194242425252527d7d7d888888888888898989acacaccf
+cfcfd6d6d6e2e2e2e0e0e0d8d8d8d2d2d2b0b0b09d9d9d505050040404020202020202181818686868868686d6d6d6ffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe4e4e4858585646464242424
+0202020202020202020202020202020202020202020202020202020202020202020202022525256464647b7b7bb8b8b8c9c9c9c9c9c9c9c9c9e3e3e3fcfcfcfe
+fefefffffffffffffffffffdfdfde8e8e8dbdbdb6e6e6e0404040202020202021717175e5e5e7b7b7bd2d2d2ffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffefefefd2d2d2b3b3b3515151323232121212020202
+0202020202020202020202020202020202020202020202020202020202020202023e3e3ea8a8a8bcbcbcdcdcdce4e4e4e4e4e4e4e4e4f1f1f1fefefeffffffff
+fffffffffffffffffefefef2f2f2e9e9e98181811c1c1c1111110404041616165c5c5c797979d1d1d1ffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffdfdfdfa6a6a68383831f1f1f040404020202020202020202
+020202020202020202020202020202020202020202020202020202020202565656eaeaeafbfbfbfefefeffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffbfbfbf7f7f7939393323232212121050505161616595959767676d0d0d0ffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff8f8f8f2f2f2c6c6c67878785c5c5c161616020202020202020202020202020202
+0202020202021111114949495151512020200707071414142020204e4e4e9e9e9ea7a7a7a9a9a9b0b0b0e4e4e4ffffffffffffffffffffffffffffffffffffff
+fffffffffffcfcfcf9f9f99b9b9b3e3e3e2828280606060f0f0f3c3c3c555555c5c5c5ffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffecececd9d9d9999999272727171717070707020202020202020202020202020202020202
+0202022e2e2ec6c6c6dfdfdf5757570f0f0f343434585858414141151515101010111111222222b3b3b3ffffffffffffffffffffffffffffffffffffffffffff
+fffffefefefcfcfca6a6a65252523737370707070404040808081b1b1bb1b1b1ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffe1e1e1c3c3c38686861b1b1b0d0d0d0505050202020202020202020202020202021111112e2e2e
+575757dcdcdcf1f1f17171712e2e2e3e3e3e4d4d4d343434050505000000000000141414aeaeaefffffffffffffffffffffffffffffffffffffffffffffffffd
+fdfdfafafab7b7b77474745d5d5d3535353030303030303f3f3fbdbdbdffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffefefebebebe7e7e7e5555550d0d0d050505020202020202020202020202020202020202494949c7c7c7dcdcdc
+f8f8f8f8f8f8b9b9b99797975454541111110b0b0b010101000000010101141414aeaeaefffffffffffffffffffffffffffffffffffffffffffffffff8f8f8f5
+f5f5ebebebe2e2e2ddddddd5d5d5d3d3d3d3d3d3d7d7d7f1f1f1ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffcfcfcf8f8f8aeaeae656565494949181818151515151515151515151515151515151515151515646464f1f1f1fffffffbfbfb
+f5f5f5c3c3c3a7a7a7525252010101000000000000000000020202161616afafaffffffffffffffffffffffffffffffffffffffffffffffffff7f7f7f4f4f4fa
+fafaffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffcfcfcdcdcdcc9c9c97979792c2c2c575757a5a5a5adadadadadadadadadadadadadadadadadadadadadc9c9c9fafafaf7f7f7d8d8d8c6c6c6
+6b6b6b3b3b3b1e1e1e0000000000000000000202020d0d0d202020b3b3b3fffffffffffffffffffffffffffffffffffffffffffffffff7f7f7f4f4f4fafafaff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffafafac9c9c9aeaeae5e5e5e0f0f0f5f5f5ff1f1f1fffffffffffffffffffffffffffffffffffffffffffffffffffffff3f3f3c6c6c6adadad3c3c3c
+000000000000000000000000000000050505121212282828b5b5b5fffffffffffffffffffffffffffffffffffffffffffffffff7f7f7f3f3f3f9f9f9ffffffff
+fffffffffffffffffefefefefefeffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fff4f4f48d8d8d5858586f6f6f878787b0b0b0f8f8f8fffffffffffffffffffffffffffffffffffffffffffffffffffffff9f9f9e3e3e3cdcdcd484848000000
+0000000000000000000000000b0b0b2e2e2e464646c0c0c0fffffffffffffffffffffffffffffffffffffffffffefefef2f2f2edededf6f6f6ffffffffffffff
+ffffeeeeeeafafafa5a5a5e0e0e0ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffeded
+ed515151020202818181fcfcfcfefefeffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffededed525252000000000000
+000000000000000000101010484848626262cacacafffffffffffffffffffffffffffffffffffffffffffefefeeeeeeee6e6e6f3f3f3ffffffffffffffffffdd
+dddd6161614f4f4fc3c3c3fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff3f3f38c8c
+8c575757acacacfefefefffffffffffffffffffffffffffffffffffffffffffffffffffffffdfdfdf9f9f9fafafafefefeededed525252000000000000000000
+0000000000001b1b1b787878989898dcdcdcfffffffffffffffffffffffffffffffffffffffffffbfbfbd1d1d1bbbbbbb3b3b3aaaaaaaaaaaaaaaaaa9a9a9a60
+60605d5d5dc7c7c7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffefefef4f4f4efef
+eff7f7f7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff9f9f9edededefefeffcfcfcededed525252000000000000000000000000
+0000002e2e2ecacacaf5f5f5fcfcfcfffffffffffffffffffffffffffffffffffffffffff5f5f59f9f9f7070704141411414141212121212122424245e5e5e78
+7878d1d1d1fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffcfcfce0e0e0d2d2d2e9e9
+e9fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff9f9f9efefefe8e8e8d6d6d6c2c2c2444444000000000000000000000000000000
+303030d3d3d3fffffffffffffffffffffffffffffffffffffffffffefefefafafaeeeeee8c8c8c5858582d2d2d0202020202020202021717175e5e5e7b7b7bd2
+d2d2fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff1f1f1717171303030989898fefe
+fefffffffffffffffffffffffffffffffffffffffffffffffffffffffdfdfdf9f9f9d3d3d35151512b2b2b0f0f0f000000000000000000000000000000303030
+d3d3d3fffffffffffffffffffffffffffffffffffffffffffafafae7e7e7d5d5d55d5d5d1e1e1e1010100202020202020202021717175e5e5e7b7b7bd2d2d2ff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffefefef5f5f5f1616168b8b8bfefefefcfc
+fcf6f6f6f7f7f7fefefefffffffffffffffffffffffffffffffefefefcfcfcd1d1d13d3d3d121212070707000000000000000000000000000000303030d3d3d3
+fffffffffffffffffffffffffffffffffffffefefef7f7f7dbdbdbc6c6c64d4d4d0e0e0e0808080202020202020202021717176161617f7f7fd3d3d3ffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffafafac7c7c7aeaeaed7d7d7ffffffdededea2a2
+a2aeaeaeeeeeeefffffffffffffffffffffffffffffffffffffdfdfdeeeeeebbbbbba1a1a1383838000000000000000000000000000000303030d3d3d3ffffff
+fffffffffffffffffffffffffcfcfcf6f6f6e3e3e3a0a0a08585853131310606060404040202020202020202021e1e1e7e7e7e9f9f9fdededeffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffefefefefefeffffffffffffcdcdcd7474748686
+86e6e6e6fffffffffffffffffffefefefdfdfdfdfdfdfdfdfdfdfdfdffffffededed525252010101020202040404040404040404313131d3d3d3ffffffffffff
+fffffffffffffffffff9f9f9f0f0f0d6d6d67f7f7f6161612222220202020202020202020202020202022020208e8e8eb1b1b1e4e4e4ffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff9f9f9c1c1c1a3a3a3d2d2d2ffffffc9c9c96767677b7b7be3e3
+e3fffffffffffffefefebfbfbf808080969696bdbdbdcbcbcbececece3e3e34f4f4f020202424242818181828282828282999999eaeaeaffffffffffffffffff
+e3e3e3c7c7c7b2b2b28b8b8b7878784242423030301212120202020202020202020505050b0b0b2e2e2ea7a7a7cccccceeeeeeffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff3f3f38585854d4d4da6a6a6fefefec3c3c35b5b5b707070e1e1e1ffff
+fffffffffdfdfd8080800606063030308080809a9a9ad9d9d9d9d9d94c4c4c040404818181fcfcfcfefefefefefefefefefffffffffffffffffffefefec7c7c7
+9191916b6b6b2828281c1c1c080808020202020202020202020202020202080808111111393939c1c1c1e7e7e7f7f7f7ffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff6f6f6a3a3a3787878969696b3b3b38989893d3d3d5b5b5bddddddf9f9f9c5c5
+c5a9a9a95555550404042020205555556868689999999c9c9c424242161616696969bbbbbbbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbc8e8e8e616161
+4848481b1b1b1212120606060202020202020202022e2e2e575757515151464646646464d1d1d1efefeffafafaffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffcfcfcdadadac7c7c77979792c2c2c1f1f1f090909353535d3d3d3efefef5f5f5f1212
+120b0b0b0202020505050b0b0b1111112929293030303434343535353d3d3d4646464545454545454545454545454646464646464545452828280e0e0e0b0b0b
+050505040404020202020202020202050505797979eeeeeed3d3d3a2a2a2aeaeaeedededfefefeffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffdfdfde6e6e6d8d8d88b8b8b3f3f3f2b2b2b0b0b0b2c2c2caeaeaec3c3c34545450202020202
+020202020202020202020707071818181f1f1f2828282f2f2f2f2f2f2f2f2f2e2e2e2e2e2e2e2e2e2f2f2f2f2f2f2f2f2f2e2e2e181818040404040404020202
+020202020202020202020202050505747474e2e2e2d3d3d3b8b8b8c3c3c3f3f3f3ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffafafaf7f7f7d5d5d5b3b3b37f7f7f2020201b1b1b2929292b2b2b1010100202020202020202
+020202020202020404040707070808080b0b0b0c0c0c0c0c0c0c0c0c0c0c0c0b0b0b0b0b0b0c0c0c0c0c0c0c0c0c0c0c0c070707020202020202020202020202
+0202020202020202020404044141417f7f7fa3a3a3e4e4e4efefeffcfcfcffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffebebebd7d7d79c9c9c3434342222220c0c0c0505050404040202020202020202020202
+02020202020202020202020202020202020202020202020202010101010101010101010101020202020202020202020202020202020202040404050505050505
+0606060b0b0b0e0e0e3f3f3f6f6f6f9e9e9ef1f1f1fbfbfbffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffff8f8f8f1f1f1d3d3d3a0a0a08383833636361e1e1e0c0c0c0202020202020202020202020202
+020202020202020202020202020202020202020202020101010101010101010101010202020202020202020202020202020808081515151818181f1f1f252525
+5050506868689b9b9bccccccddddddfbfbfbfefefeffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffff2f2f2d9d9d9b8b8b84d4d4d2d2d2d1111110404040404040404040202020202020202
+020202020202020202020202020202020202020101010101010101010101010202020202020202020202020202020d0d0d1f1f1f2424242e2e2e383838777777
+999999ccccccffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffcecece7676767474748e8e8e9292927171716161615757574e4e4e3b3b3b1919191212120606
+060202020202020202020202020202020101010101010101010101010202020202020202020f0f0f1c1c1c3f3f3f7f7f7f8989899595959c9c9cbbbbbbcccccc
+e6e6e6ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffababab141414303030cececef4f4f4cfcfcfbcbcbca9a9a99696967171713030302222220808080202
+020202020202020202020202020101010101010101010101010202020202020202021c1c1c343434717171dcdcdcebebebfafafafefefeffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffc7c7c7626262767676dfdfdff9f9f9e0e0e0d3d3d3c7c7c7bababaa0a0a07171716767675151514b4b4b3939
+393030303d3d3d4848484444443d3d3d3f3f3f4949494d4d4d4d4d4d4d4d4d6060607272729e9e9ee8e8e8f3f3f3fdfdfdffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffafafaf0f0f0f2f2f2fcfcfcfffffffcfcfcfbfbfbfafafaf9f9f9f1f1f1e4e4e4dfdfdfd3d3d3cbcbcb9c9c9c8585
+85a3a3a3c3c3c3b9b9b9a5a5a5abababc8c8c8d0d0d0d0d0d0d0d0d0dadadae3e3e3ecececfcfcfcfefefeffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffbfbfbf3f3f3f0f0f0e7e7e7e0e0e0b7b7b7a3a3a3bebe
+bed9d9d9d0d0d0bfbfbfc3c3c3dededee4e4e4e4e4e4e5e5e5ebebebf2f2f2f7f7f7ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffdfdfdfcfcfcfafafaf9f9f9f0f0f0ecececf2f2f2f7f7
+f7f5f5f5f2f2f2f3f3f3f8f8f8fafafafafafafafafafbfbfbfdfdfdfefefeffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffff
+grestore
+/DejaVuSans 10.000 selectfont
+gsave
+
+326.83 20.4688 translate
+0 rotate
+0 0 m /C glyphshow
+6.98242 0 m /l glyphshow
+9.76074 0 m /a glyphshow
+15.8887 0 m /s glyphshow
+21.0986 0 m /s glyphshow
+26.3086 0 m /i glyphshow
+29.0869 0 m /f glyphshow
+32.6074 0 m /i glyphshow
+35.3857 0 m /e glyphshow
+41.5381 0 m /d glyphshow
+47.8857 0 m /space glyphshow
+51.0645 0 m /a glyphshow
+57.1924 0 m /s glyphshow
+62.4023 0 m /space glyphshow
+65.5811 0 m /one glyphshow
+71.9434 0 m /space glyphshow
+75.1221 0 m /w glyphshow
+83.3008 0 m /i glyphshow
+86.0791 0 m /t glyphshow
+90 0 m /h glyphshow
+grestore
+/DejaVuSans 10.000 selectfont
+gsave
+
+335.642 9.27813 translate
+0 rotate
+0 0 m /p glyphshow
+6.34766 0 m /r glyphshow
+10.209 0 m /o glyphshow
+16.3271 0 m /b glyphshow
+22.6748 0 m /a glyphshow
+28.8027 0 m /b glyphshow
+35.1504 0 m /i glyphshow
+37.9287 0 m /l glyphshow
+40.707 0 m /i glyphshow
+43.4854 0 m /t glyphshow
+47.4062 0 m /y glyphshow
+53.3242 0 m /space glyphshow
+56.5029 0 m /zero glyphshow
+62.8652 0 m /period glyphshow
+66.0439 0 m /seven glyphshow
+72.4062 0 m /four glyphshow
+grestore
+/DejaVuSans 12.000 selectfont
+gsave
+
+341.338 82.9554 translate
+0 rotate
+0 0 m /N glyphshow
+8.97656 0 m /e glyphshow
+16.3594 0 m /w glyphshow
+26.1738 0 m /space glyphshow
+29.9883 0 m /i glyphshow
+33.3223 0 m /m glyphshow
+45.0117 0 m /a glyphshow
+52.3652 0 m /g glyphshow
+59.9824 0 m /e glyphshow
+grestore
+/DejaVuSans-Bold 12.000 selectfont
+gsave
+
+90.7454 119.472 translate
+0 rotate
+0 0 m /E glyphshow
+8.19727 0 m /x glyphshow
+15.9375 0 m /a glyphshow
+24.0352 0 m /m glyphshow
+36.5391 0 m /p glyphshow
+45.1289 0 m /l glyphshow
+49.2422 0 m /e glyphshow
+57.3809 0 m /space glyphshow
+61.5586 0 m /c glyphshow
+68.6719 0 m /o glyphshow
+76.916 0 m /u glyphshow
+85.459 0 m /n glyphshow
+94.002 0 m /t glyphshow
+99.7383 0 m /e glyphshow
+107.877 0 m /r glyphshow
+113.795 0 m /f glyphshow
+119.016 0 m /a glyphshow
+127.113 0 m /c glyphshow
+134.227 0 m /t glyphshow
+139.963 0 m /u glyphshow
+148.506 0 m /a glyphshow
+156.604 0 m /l glyphshow
+160.717 0 m /space glyphshow
+164.895 0 m /e glyphshow
+173.033 0 m /x glyphshow
+180.773 0 m /p glyphshow
+189.363 0 m /l glyphshow
+193.477 0 m /a glyphshow
+201.574 0 m /n glyphshow
+210.117 0 m /a glyphshow
+218.215 0 m /t glyphshow
+223.951 0 m /i glyphshow
+228.064 0 m /o glyphshow
+236.309 0 m /n glyphshow
+grestore
+
+end
+showpage

@@ -25,5 +25,5 @@ class BasicScorer(BaseScorer):
         resolution: int = 100
     ):
         initial_probability = self.get_initial_probability(single_variable_explainer)
-        final_probability = self.get_extrema(return_val=True, initial_classification=initial_classification, resolution=resolution)[1]
+        final_probability = single_variable_explainer.get_extrema(return_val=True, initial_classification=initial_classification, resolution=resolution)[1]
         return abs(final_probability - initial_probability)

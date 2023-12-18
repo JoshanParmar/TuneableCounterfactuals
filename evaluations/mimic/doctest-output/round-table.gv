@@ -1,0 +1,98 @@
+// Search Visualization
+digraph {
+	cluster_1 [label="Search Stage 0" color=lightgrey shape=box style=invis]
+	cluster_2 [label="Search Stage 1" color=lightgrey shape=box style=filled]
+"cluster_1" -> "cluster_2" [style=invis]
+	cluster_3 [label="Search Stage 2" color=lightgrey shape=box style=filled]
+"cluster_2" -> "cluster_3" [style=invis]
+	cluster_4 [label="Search Stage 3" color=lightgrey shape=box style=filled]
+"cluster_3" -> "cluster_4" [style=invis]
+	cluster_5 [label="Search Stage 4" color=lightgrey shape=box style=filled]
+"cluster_4" -> "cluster_5" [style=invis]
+	cluster_6 [label="Search Stage 5" color=lightgrey shape=box style=filled]
+"cluster_5" -> "cluster_6" [style=invis]
+	cluster_7 [label="Search Stage 6" color=lightgrey shape=box style=filled]
+"cluster_6" -> "cluster_7" [style=invis]
+	cluster_8 [label="Search Stage 7" color=lightgrey shape=box style=filled]
+"cluster_7" -> "cluster_8" [style=invis]
+	cluster_9 [label="Search Stage 8" color=lightgrey shape=box style=filled]
+"cluster_8" -> "cluster_9" [style=invis]
+	"()" [label="Initial Value"]
+"()" -> "('weight_first',)" [style=invis]
+	"('weight_first',)" [label="Weight
+Score: 0.000072"]
+	"()" -> "('weight_first',)"
+"('weight_first',)" -> "('platelet_first', 'weight_first')" [style=invis]
+	"('platelet_first',)" [label="Platelet
+Score: 0.002863"]
+	"()" -> "('platelet_first',)"
+"('platelet_first',)" -> "('platelet_first', 'weight_first')" [style=invis]
+	"('tco2_first',)" [label="TCO2
+Score: 0.000324"]
+	"()" -> "('tco2_first',)"
+"('tco2_first',)" -> "('platelet_first', 'weight_first')" [style=invis]
+	"('chloride_first',)" [label="Chloride
+Score: 0.000199"]
+	"()" -> "('chloride_first',)"
+"('chloride_first',)" -> "('platelet_first', 'weight_first')" [style=invis]
+	"('creatinine_first',)" [label="Creatinine
+Score: 0.000165"]
+	"()" -> "('creatinine_first',)"
+"('creatinine_first',)" -> "('platelet_first', 'weight_first')" [style=invis]
+	"('platelet_first', 'weight_first')" [label="Platelet, Weight
+Score: 0.001139"]
+	"('platelet_first',)" -> "('platelet_first', 'weight_first')"
+"('platelet_first', 'weight_first')" -> "('platelet_first', 'creatinine_first', 'weight_first')" [style=invis]
+	"('platelet_first', 'tco2_first')" [label="Platelet, TCO2
+Score: 0.014325"]
+	"('platelet_first',)" -> "('platelet_first', 'tco2_first')"
+"('platelet_first', 'tco2_first')" -> "('platelet_first', 'creatinine_first', 'weight_first')" [style=invis]
+	"('platelet_first', 'chloride_first')" [label="Platelet, Chloride
+Score: 0.007509"]
+	"('platelet_first',)" -> "('platelet_first', 'chloride_first')"
+"('platelet_first', 'chloride_first')" -> "('platelet_first', 'creatinine_first', 'weight_first')" [style=invis]
+	"('platelet_first', 'creatinine_first')" [label="Platelet, Creatinine
+Score: 0.015019"]
+	"('platelet_first',)" -> "('platelet_first', 'creatinine_first')"
+"('platelet_first', 'creatinine_first')" -> "('platelet_first', 'creatinine_first', 'weight_first')" [style=invis]
+	"('platelet_first', 'creatinine_first', 'weight_first')" [label="Platelet, Creatinine, Weight
+Score: 0.006505"]
+	"('platelet_first', 'creatinine_first')" -> "('platelet_first', 'creatinine_first', 'weight_first')"
+"('platelet_first', 'creatinine_first', 'weight_first')" -> "('platelet_first', 'creatinine_first', 'tco2_first', 'weight_first')" [style=invis]
+	"('platelet_first', 'creatinine_first', 'tco2_first')" [label="Platelet, Creatinine, TCO2
+Score: 0.165707"]
+	"('platelet_first', 'creatinine_first')" -> "('platelet_first', 'creatinine_first', 'tco2_first')"
+"('platelet_first', 'creatinine_first', 'tco2_first')" -> "('platelet_first', 'creatinine_first', 'tco2_first', 'weight_first')" [style=invis]
+	"('platelet_first', 'creatinine_first', 'chloride_first')" [label="Platelet, Creatinine, Chloride
+Score: 0.035634"]
+	"('platelet_first', 'creatinine_first')" -> "('platelet_first', 'creatinine_first', 'chloride_first')"
+"('platelet_first', 'creatinine_first', 'chloride_first')" -> "('platelet_first', 'creatinine_first', 'tco2_first', 'weight_first')" [style=invis]
+	"('platelet_first', 'creatinine_first', 'tco2_first', 'weight_first')" [label="Platelet, Creatinine, TCO2, Weight
+Score: 0.065846"]
+	"('platelet_first', 'creatinine_first', 'tco2_first')" -> "('platelet_first', 'creatinine_first', 'tco2_first', 'weight_first')"
+"('platelet_first', 'creatinine_first', 'tco2_first', 'weight_first')" -> "('platelet_first', 'creatinine_first', 'tco2_first', 'chloride_first', 'weight_first')" [style=invis]
+	"('platelet_first', 'creatinine_first', 'tco2_first', 'chloride_first')" [label="Platelet, Creatinine, TCO2, Chloride
+Score: 0.381458"]
+	"('platelet_first', 'creatinine_first', 'tco2_first')" -> "('platelet_first', 'creatinine_first', 'tco2_first', 'chloride_first')"
+"('platelet_first', 'creatinine_first', 'tco2_first', 'chloride_first')" -> "('platelet_first', 'creatinine_first', 'tco2_first', 'chloride_first', 'weight_first')" [style=invis]
+	"('platelet_first', 'creatinine_first', 'tco2_first', 'chloride_first', 'weight_first')" [label="Platelet, Creatinine, TCO2, Chloride, Weight
+Score: 0.217505"]
+	"('platelet_first', 'creatinine_first', 'tco2_first', 'chloride_first')" -> "('platelet_first', 'creatinine_first', 'tco2_first', 'chloride_first', 'weight_first')"
+"('platelet_first', 'creatinine_first', 'tco2_first', 'chloride_first', 'weight_first')" -> "('platelet_first', 'creatinine_first', 'tco2_first', 'weight_first', 'chloride_first')" [style=invis]
+	"('platelet_first', 'creatinine_first', 'tco2_first', 'weight_first', 'chloride_first')" [label="Platelet, Creatinine, TCO2, Weight, Chloride
+Score: 0.217500"]
+	"('platelet_first', 'creatinine_first', 'tco2_first', 'weight_first')" -> "('platelet_first', 'creatinine_first', 'tco2_first', 'weight_first', 'chloride_first')"
+"('platelet_first', 'creatinine_first', 'tco2_first', 'weight_first', 'chloride_first')" -> "('platelet_first', 'creatinine_first', 'chloride_first', 'weight_first')" [style=invis]
+	"('platelet_first', 'creatinine_first', 'chloride_first', 'weight_first')" [label="Platelet, Creatinine, Chloride, Weight
+Score: 0.217505"]
+	"('platelet_first', 'creatinine_first', 'chloride_first')" -> "('platelet_first', 'creatinine_first', 'chloride_first', 'weight_first')"
+"('platelet_first', 'creatinine_first', 'chloride_first', 'weight_first')" -> "('platelet_first', 'creatinine_first', 'chloride_first', 'tco2_first', 'weight_first')" [style=invis]
+	"('platelet_first', 'creatinine_first', 'chloride_first', 'tco2_first')" [label="Platelet, Creatinine, Chloride, TCO2
+Score: 0.217430"]
+	"('platelet_first', 'creatinine_first', 'chloride_first')" -> "('platelet_first', 'creatinine_first', 'chloride_first', 'tco2_first')"
+"('platelet_first', 'creatinine_first', 'chloride_first', 'tco2_first')" -> "('platelet_first', 'creatinine_first', 'chloride_first', 'tco2_first', 'weight_first')" [style=invis]
+	"('platelet_first', 'creatinine_first', 'chloride_first', 'tco2_first', 'weight_first')" [label="Platelet, Creatinine, Chloride, TCO2, Weight
+Score: 0.217505"]
+	"('platelet_first', 'creatinine_first', 'chloride_first', 'tco2_first')" -> "('platelet_first', 'creatinine_first', 'chloride_first', 'tco2_first', 'weight_first')"
+	layout=dot
+}
