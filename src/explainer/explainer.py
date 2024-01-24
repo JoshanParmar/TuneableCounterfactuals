@@ -1,6 +1,7 @@
 import traceback
 import numpy as np
 import pandas as pd
+import time
 
 from explainer.searcher import Searcher
 from explainer.scorer import BaseScorer, BasicScorer
@@ -25,6 +26,7 @@ class Explainer:
         bounding_method = 'meanstd',
         override_variable_bounds: Union[Dict[str, Tuple[int, int]], Tuple[int, int]] = None,
         std_dev = 1,
+        quantiles = 0.1,
         number_samples = 10,
         regressor = 'gaussian_process',
         scorer: Union[str, BaseScorer] = 'basic',
@@ -59,6 +61,7 @@ class Explainer:
         self.sampling_method = sampling_method
         self.bounding_method = bounding_method
         self.std_dev = std_dev
+        self.quantiles = quantiles
         self.number_samples = number_samples
         self.regressor = regressor
         self.override_variable_bounds = override_variable_bounds
@@ -105,7 +108,8 @@ class Explainer:
         initial_classification: int = None,
         additional_threshold = 0,
         store_historical_explainers = False,
-        do_parallel = False
+        do_parallel = False,
+        store_historical_times = False
     ):
         '''
             This method explains the output of the model at a given input point.
@@ -134,8 +138,10 @@ class Explainer:
 
         found = False
         historical_scores = []
+        if store_historical_times: historical_times = []
         if store_historical_explainers: historical_explainers = {}
         with tqdm(total=len(self.variables)) as pbar:
+            current_time = time.time()
             try: 
                 while not found:
                     current_node = searcher.current_node
@@ -154,6 +160,7 @@ class Explainer:
                                 'sampling_method': self.sampling_method,
                                 'bounding_method': self.bounding_method,
                                 'std_dev': self.std_dev,
+                                'quantiles': self.quantiles,
                                 'number_samples': self.number_samples,
                                 'regressor': self.regressor
                             }
@@ -215,9 +222,15 @@ class Explainer:
                     historical_scores.append(max(scores.values()))
                     pbar.update(1)
                     if store_historical_explainers: historical_explainers.update(single_variable_explainers)
+                    if store_historical_times: historical_times.append(time.time() - current_time)
                 if found:
                     if store_historical_explainers: 
-                        return solution, single_variable_explainers[solution], extrema_dict, historical_scores, historical_explainers
+                        if store_historical_times: 
+                            return solution, single_variable_explainers[solution], extrema_dict, historical_scores, historical_explainers, historical_times
+                        else:
+                            return solution, single_variable_explainers[solution], extrema_dict, historical_scores, historical_explainers
+                    if store_historical_times: 
+                        return solution, single_variable_explainers[solution], extrema_dict, historical_scores, historical_times
                     return solution, single_variable_explainers[solution], extrema_dict, historical_scores
 
             except ValueError as e:
