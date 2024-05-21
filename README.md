@@ -58,5 +58,10 @@ Soumya Banerjee (sb2333@cam.ac.uk)
 Forthcoming
 
 
-##
-#
+## Graphical abstract
+
+A graphical summary of our work is shown here
+
+
+![summary](figures/graphical_abstract.png)
+
