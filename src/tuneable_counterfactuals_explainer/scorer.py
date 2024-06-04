@@ -1,5 +1,5 @@
 import pandas as pd
-import explainer.single_variable_explainer as sve
+import tuneable_counterfactuals_explainer.single_variable_explainer as sve
 class BaseScorer():
     def get_initial_probability(
         self,

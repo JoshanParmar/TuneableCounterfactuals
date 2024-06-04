@@ -3,9 +3,9 @@ import numpy as np
 import pandas as pd
 import time
 
-from explainer.searcher import Searcher
-from explainer.scorer import BaseScorer, BasicScorer
-from explainer.single_variable_explainer import SingleVariableExplainer
+from tuneable_counterfactuals_explainer.searcher import Searcher
+from tuneable_counterfactuals_explainer.scorer import BaseScorer, BasicScorer
+from tuneable_counterfactuals_explainer.single_variable_explainer import SingleVariableExplainer
 
 from tqdm import tqdm
 from typing import Union,Dict,Tuple
