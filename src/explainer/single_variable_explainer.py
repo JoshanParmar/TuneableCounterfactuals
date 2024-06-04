@@ -111,6 +111,7 @@ class SingleVariableExplainer():
         self.explainable_variable = explainable_variable
         self.regressor_type = regressor
         self.explanation_point = explanation_point
+        self.training_dataset = training_dataset
 
 
         # Handle variable bounds
@@ -164,9 +165,10 @@ class SingleVariableExplainer():
 
     def plot(
         self,
+        initial_classification: int = None,
         plot_resolution: int = 100,
         ax=None,
-        show_arrow: bool = True
+        show_arrow: bool = True,
     ):
         '''
             Plots the simple model and the underlying model's predictions for the samples taken.
@@ -175,6 +177,8 @@ class SingleVariableExplainer():
             plot_resolution: int (optional)
                 The number of points to be plotted for the simple model. This should be an integer. If not provided, 100 will be used.
         '''
+        if initial_classification is None:
+            initial_classification = int(self.underlying_model.predict(pd.DataFrame(self.explanation_point[self.underlying_model.feature_names_in_]).T))
         if ax is None:
             fig, ax = plt.subplots()
         X = np.linspace(
@@ -211,22 +215,22 @@ class SingleVariableExplainer():
         )
 
         ax.scatter(
-            self.get_arg_extrema(),
-            self.get_val_extrema(),
+            self.get_arg_extrema(initial_classification=initial_classification),
+            self.get_val_extrema(initial_classification=initial_classification),
             color='green',
             zorder=10
         )
         if show_arrow:
             ax.arrow(
-                (initial_point[self.explainable_variable] + 0.02*(self.get_arg_extrema() - initial_point[self.explainable_variable])).values[0],
-                self.underlying_model.predict_proba(initial_point)[0][1] + 0.02*(self.get_val_extrema() - self.underlying_model.predict_proba(initial_point)[0][1]),
-                (0.92*(self.get_arg_extrema() - initial_point[self.explainable_variable])).values[0],
-                0.92*(self.get_val_extrema() - self.underlying_model.predict_proba(initial_point)[0][1]),
+                (initial_point[self.explainable_variable] + 0.02*(self.get_arg_extrema(initial_classification=initial_classification) - initial_point[self.explainable_variable])).values[0],
+                self.underlying_model.predict_proba(initial_point)[0][1] + 0.02*(self.get_val_extrema(initial_classification=initial_classification) - self.underlying_model.predict_proba(initial_point)[0][1]),
+                (0.92*(self.get_arg_extrema(initial_classification=initial_classification) - initial_point[self.explainable_variable])).values[0],
+                0.92*(self.get_val_extrema(initial_classification=initial_classification) - self.underlying_model.predict_proba(initial_point)[0][1]),
                 color='grey',
                 alpha=0.5,
-                width=(0.02*(self.get_val_extrema() - self.underlying_model.predict_proba(initial_point)[0][1])),
+                width=(0.02*(self.get_val_extrema(initial_classification=initial_classification) - self.underlying_model.predict_proba(initial_point)[0][1])),
                 # head_width=0.05,
-                head_length=abs(0.05*(0.8*(self.get_arg_extrema() - initial_point[self.explainable_variable])).values[0]),
+                head_length=abs(0.05*(0.8*(self.get_arg_extrema(initial_classification=initial_classification) - initial_point[self.explainable_variable])).values[0]),
             )
 
     def get_extrema(
