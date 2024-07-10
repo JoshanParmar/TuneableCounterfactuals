@@ -7,7 +7,7 @@ class BaseScorer():
     ):
         initial_point = pd.DataFrame(single_variable_explainer.explanation_point).T[single_variable_explainer.underlying_model.feature_names_in_]
         initial_point.columns = single_variable_explainer.underlying_model.feature_names_in_
-        return single_variable_explainer.underlying_model.predict_proba(initial_point)[0][1]
+        return single_variable_explainer.probability_prediction_function(initial_point)[0][1]
     
 
     def get_score(

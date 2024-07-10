@@ -23,7 +23,10 @@ class SingleVariableExplainer():
         quantiles = 0.1,
         std_dev = 1,
         number_samples = 10,
-        regressor : Union[str, RegressorMixin]  = 'gaussian_process'
+        regressor : Union[str, RegressorMixin]  = 'gaussian_process',
+        probability_prediction_function = None,
+        class_prediction_function = None,
+        
     ) -> None:
         '''
             This class fits a simple, interpretable model to the to the underlying model to explain the effect of a single variable on the underlying model's prediction.
@@ -155,13 +158,28 @@ class SingleVariableExplainer():
             elif regressor == 'linear':
                 self.regressor = LinearRegression()
     
+        if probability_prediction_function is None:
+            self.probability_prediction_function = lambda x: self.underlying_model.predict_proba(x)
+            self.to_double_index = True
+        else:
+            self.probability_prediction_function = probability_prediction_function
+            self.to_double_index = False
+
+        
+        if class_prediction_function is None:
+            self.class_prediction_function = lambda x: self.underlying_model.predict(x)
+        else:
+            self.class_prediction_function = class_prediction_function
+
         # Create explanation dataset
         self.explanation_dataset = pd.DataFrame(explanation_point).T.iloc[[0 for _ in range(number_samples)]].reset_index().drop(columns=['index'])[underlying_model.feature_names_in_]
         self.explanation_dataset[explainable_variable] = self.samples
-        self.explanation_dataset['_prediction'] = self.underlying_model.predict_proba(self.explanation_dataset[self.underlying_model[0].feature_names_in_])[:, 1]
+        self.explanation_dataset['_prediction'] = self.probability_prediction_function(self.explanation_dataset[self.underlying_model[0].feature_names_in_])[:, 1]
         
         # Fit regressor
         self.regressor.fit(self.explanation_dataset[[explainable_variable]], self.explanation_dataset['_prediction']) 
+
+
 
     def plot(
         self,
@@ -178,7 +196,7 @@ class SingleVariableExplainer():
                 The number of points to be plotted for the simple model. This should be an integer. If not provided, 100 will be used.
         '''
         if initial_classification is None:
-            initial_classification = int(self.underlying_model.predict(pd.DataFrame(self.explanation_point[self.underlying_model.feature_names_in_]).T))
+            initial_classification = int(self.class_prediction_function(pd.DataFrame(self.explanation_point[self.underlying_model.feature_names_in_]).T))
         if ax is None:
             fig, ax = plt.subplots()
         X = np.linspace(
@@ -209,7 +227,7 @@ class SingleVariableExplainer():
         
         ax.scatter(
             initial_point[self.explainable_variable],
-            self.underlying_model.predict_proba(initial_point)[0][1],
+            self.probability_prediction_function(initial_point)[0][1],
             color='red',
             zorder=10
         )
@@ -223,12 +241,12 @@ class SingleVariableExplainer():
         if show_arrow:
             ax.arrow(
                 (initial_point[self.explainable_variable] + 0.02*(self.get_arg_extrema(initial_classification=initial_classification) - initial_point[self.explainable_variable])).values[0],
-                self.underlying_model.predict_proba(initial_point)[0][1] + 0.02*(self.get_val_extrema(initial_classification=initial_classification) - self.underlying_model.predict_proba(initial_point)[0][1]),
+                self.probability_prediction_function(initial_point)[0][1] + 0.02*(self.get_val_extrema(initial_classification=initial_classification) - self.underlying_model.predict_proba(initial_point)[0][1]),
                 (0.92*(self.get_arg_extrema(initial_classification=initial_classification) - initial_point[self.explainable_variable])).values[0],
-                0.92*(self.get_val_extrema(initial_classification=initial_classification) - self.underlying_model.predict_proba(initial_point)[0][1]),
+                0.92*(self.get_val_extrema(initial_classification=initial_classification) - self.probability_prediction_function(initial_point)[0][1]),
                 color='grey',
                 alpha=0.5,
-                width=(0.02*(self.get_val_extrema(initial_classification=initial_classification) - self.underlying_model.predict_proba(initial_point)[0][1])),
+                width=(0.02*(self.get_val_extrema(initial_classification=initial_classification) - self.probability_prediction_function(initial_point)[0][1])),
                 # head_width=0.05,
                 head_length=abs(0.05*(0.8*(self.get_arg_extrema(initial_classification=initial_classification) - initial_point[self.explainable_variable])).values[0]),
             )
@@ -253,7 +271,7 @@ class SingleVariableExplainer():
                 The number of points to be used in the evaluation of the simple model. This should be an integer. If not provided, 100 will be used.
         '''
         if initial_classification is None:
-            initial_classification = int(self.underlying_model.predict(pd.DataFrame(self.explanation_point[self.underlying_model.feature_names_in_]).T))
+            initial_classification = int(self.class_prediction_function(pd.DataFrame(self.explanation_point[self.underlying_model.feature_names_in_]).T))
         
         X = np.linspace(
             self.variable_bounds[0],

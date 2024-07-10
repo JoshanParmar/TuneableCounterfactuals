@@ -25,12 +25,14 @@ class Explainer:
         sampling_method = 'uniform',       
         bounding_method = 'meanstd',
         override_variable_bounds: Union[Dict[str, Tuple[int, int]], Tuple[int, int]] = None,
+        probability_prediction_function = None,
+        class_prediction_function = None,
         std_dev = 1,
         quantiles = 0.1,
         number_samples = 10,
         regressor = 'gaussian_process',
         scorer: Union[str, BaseScorer] = 'basic',
-        changeability_scores = None
+        changeability_scores = None,
     ):
         '''
             This class implements the process of chaining together single variable explainers to explain the output of the overall model. It uses the Searcher class to determine the order in which to evaluate the single variable explainers.
@@ -88,6 +90,17 @@ class Explainer:
             else:
                 raise ValueError('scorer must be one one [\'basic\'] or a BaseScorer object')
         
+        if probability_prediction_function is None:
+            self.probability_prediction_function = lambda x: self.underlying_model.predict_proba(x)
+        else:
+            self.probability_prediction_function = probability_prediction_function
+
+
+        if class_prediction_function is None:
+            self.class_prediction_function = lambda x: self.underlying_model.predict(x)
+        else:
+            self.class_prediction_function = class_prediction_function
+        
     def handle_variable_bounds(
         self,
         variable
@@ -122,14 +135,14 @@ class Explainer:
             - additional_threshold: additional threshold to use for determining the solution (default: 0)
         '''
         if initial_classification is None:
-            initial_classification = int(self.underlying_model.predict(pd.DataFrame(explanation_point[self.underlying_model.feature_names_in_]).T))
+            initial_classification = int(self.class_prediction_function(pd.DataFrame(explanation_point[self.underlying_model.feature_names_in_]).T))
         searcher = Searcher(self.variables)
         evaluation_points_dict = {tuple(): explanation_point}
 
         initial_point = pd.DataFrame(explanation_point).T[self.underlying_model.feature_names_in_]
         initial_point.columns = self.underlying_model.feature_names_in_
 
-        extrema_dict = {tuple(): self.underlying_model.predict_proba(initial_point)[0][1]}
+        extrema_dict = {tuple(): self.probability_prediction_function(initial_point)[0][1]}
         previous_scores = {tuple(): 0}
         
 
@@ -187,7 +200,9 @@ class Explainer:
                                 bounding_method = self.bounding_method,
                                 std_dev = self.std_dev,
                                 number_samples = self.number_samples,
-                                regressor = self.regressor
+                                regressor = self.regressor,
+                                probability_prediction_function = self.probability_prediction_function,
+                                class_prediction_function = self.class_prediction_function
                             )
                             for node in evaluation_nodes
                         }
@@ -213,7 +228,7 @@ class Explainer:
                             
                     for key, value in arg_extrema.items():
                         previous_value = evaluation_points_dict[key[:-1]].copy()
-                        previous_value[key[-1]] = value
+                        previous_value[key[-1]] = np.float32(value)
                         evaluation_points_dict[key] = previous_value
 
                         extrema_dict[key] = val_extrema[key]
