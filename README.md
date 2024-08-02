@@ -16,6 +16,8 @@ pip install -r requirements.txt
 A simple example that uses our methodology to generate counterfactual explanations for a black box model.
 
 ```python
+# Example to run our method on the MNIST Dataset.
+
 import sklearn
 
 from sklearn.datasets import fetch_openml
@@ -23,6 +25,8 @@ from sklearn.model_selection import train_test_split
 from sklearn.neural_network import MLPClassifier
 from sklearn.pipeline import make_pipeline
 from sklearn.preprocessing import StandardScaler
+
+from tuneable_counterfactuals_explainer.explainer import Explainer
 
 data = fetch_openml('mnist_784', parser='auto')
 train_x, test_x, train_y, test_y = train_test_split(
@@ -44,7 +48,7 @@ explainer = Explainer(
     override_variable_bounds=(0, 255)
 )
 
-result = explainer.explain(training_data.iloc[id], additional_threshold=0.25)
+result = explainer.explain(train_x.iloc[0], additional_threshold=0.25)
 ```
 
 ## Contact
