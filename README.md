@@ -8,6 +8,12 @@ A general purpose library for generating counterfactuals to explain the outputs 
 ## Installation
 
 ```python
+pip install tuneable-counterfactuals-explainer
+```
+
+or
+
+```python
 pip install -r requirements.txt
 ```
 
