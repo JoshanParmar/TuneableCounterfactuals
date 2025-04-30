@@ -65,7 +65,14 @@ Soumya Banerjee (sb2333@cam.ac.uk)
 
 ## Citation
 
-Forthcoming
+If you use our work, please cite the following manuscript:
+
+A Framework for Generating Counterfactual Explanations to Explain Black-Box Models, 
+Joshan Parmar, Pietro Liò, Soumya Banerjee
+
+https://www.preprints.org/manuscript/202501.1083/v1
+
+
 
 
 ## Graphical abstract
